@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Link21 - Global AI Tech & Agent Innovation Center</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary-blue: #0066ff;
+        --primary-dark: #0a1628;
+        --accent-cyan: #2de2e6;
+        --bg-light: #f8fafc;
+        --bg-card: #ffffff;
+        --text-dark: #1a1a2e;
+        --text-muted: #64748b;
+        --gradient-hero: linear-gradient(180deg, #0a1628 0%, #122a4a 100%);
+        --shadow-card: 0 4px 24px rgba(0, 102, 255, 0.08);
+        --shadow-hover: 0 12px 40px rgba(0, 102, 255, 0.15);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Noto Sans KR", sans-serif;
+        background: var(--bg-light);
+        color: var(--text-dark);
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+
+      /* 상단 고정 네비게이션 */
+      .top-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        background: rgba(10, 22, 40, 0.95);
+        backdrop-filter: blur(10px);
+        padding: 14px 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid rgba(45, 226, 230, 0.15);
+      }
+      .nav-logo {
+        height: 32px;
+      }
+      .nav-logo img {
+        height: 100%;
+        object-fit: contain;
+      }
+      .nav-subtitle {
+        font-size: 0.75rem;
+        color: var(--accent-cyan);
+        font-weight: 500;
+        letter-spacing: 0.03em;
+      }
+
+      /* Hero Section */
+      .hero {
+        background: var(--gradient-hero);
+        padding: 110px 20px 0; /* 상단 네비 높이만큼 패딩 추가 */
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(
+          ellipse at 50% 0%,
+          rgba(45, 226, 230, 0.06) 0%,
+          transparent 60%
+        );
+        pointer-events: none;
+      }
+      .hero-content {
+        position: relative;
+        z-index: 1;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      /* 후킹 타이틀 */
+      .hook-title {
+        margin-bottom: 55px;
+      }
+      .hook-title h1 {
+        font-size: clamp(2rem, 5vw, 3.2rem);
+        font-weight: 900;
+        color: white;
+        line-height: 1.3;
+        margin-bottom: 16px;
+      }
+      .hook-title h1 span {
+        color: var(--accent-cyan);
+      }
+      .hook-title p {
+        font-size: 1.05rem;
+        color: rgba(255, 255, 255, 0.6);
+      }
+
+      /* Glocal Section */
+      .glocal-section {
+        padding: 50px 20px 40px;
+      }
+      .glocal-content {
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+      .glocal-title {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: white;
+        text-align: center;
+        margin-bottom: 35px;
+      }
+      .glocal-title span {
+        color: var(--accent-cyan);
+      }
+
+      /* Glocal 그리드 */
+      .glocal-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px 40px;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      .glocal-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 8px 0;
+      }
+      .glocal-item::before {
+        content: "";
+        width: 6px;
+        height: 6px;
+        background: var(--accent-cyan);
+        border-radius: 50%;
+        flex-shrink: 0;
+      }
+      .glocal-item p {
+        color: rgba(255, 255, 255, 0.85);
+        font-size: 0.95rem;
+        line-height: 1.5;
+        font-weight: 400;
+      }
+
+      /* Partners Banner */
+      .partners-banner {
+        background: rgba(255, 255, 255, 0.97);
+        padding: 24px 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 60px;
+        flex-wrap: wrap;
+      }
+      .partner-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+      }
+      .partner-logo {
+        height: 28px;
+        object-fit: contain;
+        transition: transform 0.3s ease;
+      }
+      .partner-item:hover .partner-logo {
+        transform: scale(1.08);
+      }
+      .partner-desc {
+        font-size: 0.72rem;
+        color: hsl(182, 100%, 16%);
+        font-weight: 600;
+      }
+
+      /* Programs Header */
+      .programs-header {
+        background: var(--primary-dark);
+        padding: 60px 20px 40px;
+        text-align: center;
+      }
+      .programs-header h2 {
+        font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+        font-weight: 800;
+        color: white;
+        margin-bottom: 14px;
+      }
+      .programs-header p {
+        font-size: 0.95rem;
+        color: rgba(255, 255, 255, 0.5);
+      }
+
+      /* Main Content */
+      .main-content {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 60px 20px 100px;
+      }
+      .section-header {
+        text-align: center;
+        margin-bottom: 50px;
+      }
+      .section-header h2 {
+        font-size: clamp(1.5rem, 3vw, 2rem);
+        font-weight: 800;
+        color: var(--text-dark);
+        margin-bottom: 10px;
+      }
+      .section-header p {
+        font-size: 0.95rem;
+        color: var(--text-muted);
+      }
+
+      /* Cards Grid */
+      .cards-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 24px;
+      }
+      .card {
+        background: var(--bg-card);
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: var(--shadow-card);
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        cursor: pointer;
+        position: relative;
+      }
+      .card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(
+          90deg,
+          var(--primary-blue),
+          var(--accent-cyan)
+        );
+        transform: scaleX(0);
+        transition: transform 0.4s ease;
+      }
+      .card:hover {
+        transform: translateY(-6px);
+        box-shadow: var(--shadow-hover);
+      }
+      .card:hover::before {
+        transform: scaleX(1);
+      }
+      .card-image-wrapper {
+        height: 280px;
+        overflow: hidden;
+        position: relative;
+      }
+      .card-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+        transition: transform 0.4s ease;
+      }
+      .card:hover .card-image {
+        transform: scale(1.02);
+      }
+      .card-content {
+        padding: 14px 16px;
+      }
+      .card-title {
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: var(--text-dark);
+        text-align: center;
+        line-height: 1.4;
+      }
+      .card-badge {
+        display: inline-block;
+        background: linear-gradient(
+          135deg,
+          var(--primary-blue),
+          var(--accent-cyan)
+        );
+        color: white;
+        font-size: 0.7rem;
+        font-weight: 600;
+        padding: 4px 10px;
+        border-radius: 20px;
+        margin-bottom: 10px;
+        margin-right: 6px;
+      }
+      .card-badge:last-of-type {
+        margin-right: 0;
+      }
+      .card-badge.blue {
+        background: linear-gradient(135deg, #0078d4, #00bcf2);
+      }
+      .card-badge.green {
+        background: linear-gradient(135deg, #10b981, #34d399);
+      }
+      .card-badge.orange {
+        background: linear-gradient(135deg, #ff6b35, #f7931e);
+      }
+      .card-badge.purple {
+        background: linear-gradient(135deg, #7c4dff, #b388ff);
+      }
+      .click-hint {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        margin-top: 12px;
+        font-size: 0.75rem;
+        color: white;
+        opacity: 0;
+        transform: translateY(8px);
+        transition: all 0.3s ease;
+      }
+      .card:hover .click-hint {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .click-hint svg {
+        width: 12px;
+        height: 12px;
+      }
+      .card-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 40px 16px 12px;
+        background: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.8) 0%,
+          rgba(0, 0, 0, 0.4) 50%,
+          transparent 100%
+        );
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+      .card:hover .card-overlay {
+        opacity: 1;
+      }
+
+      /* Modal */
+      .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(10, 22, 40, 0.95);
+        backdrop-filter: blur(8px);
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+      }
+      .modal-overlay.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .modal-content {
+        max-width: 90vw;
+        max-height: 90vh;
+        position: relative;
+        transform: scale(0.9);
+        transition: transform 0.3s ease;
+      }
+      .modal-overlay.active .modal-content {
+        transform: scale(1);
+      }
+      .modal-image {
+        max-width: 100%;
+        max-height: 80vh;
+        border-radius: 12px;
+        box-shadow: 0 25px 80px rgba(0, 0, 0, 0.5);
+      }
+      .modal-close {
+        position: absolute;
+        top: -45px;
+        right: 0;
+        background: white;
+        border: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      }
+      .modal-close:hover {
+        background: var(--accent-cyan);
+        transform: rotate(90deg);
+      }
+      .modal-close svg {
+        width: 18px;
+        height: 18px;
+      }
+      .modal-title {
+        color: white;
+        font-size: 1rem;
+        font-weight: 600;
+        text-align: center;
+        margin-top: 16px;
+        opacity: 0.9;
+      }
+
+      /* Footer CTA */
+      .footer {
+        background: linear-gradient(
+          135deg,
+          #0a1628 0%,
+          #1a3a5c 50%,
+          #0a1628 100%
+        );
+        padding: 60px 20px;
+        text-align: center;
+        border-top: 2px solid var(--accent-cyan);
+      }
+      .footer-title {
+        color: white;
+        font-size: clamp(1.5rem, 4vw, 2.2rem);
+        font-weight: 900;
+        margin-bottom: 8px;
+        line-height: 1.4;
+      }
+      .footer-title span {
+        color: var(--accent-cyan);
+        text-shadow: 0 0 30px rgba(45, 226, 230, 0.5);
+      }
+      .footer-cta {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 1rem;
+        font-weight: 500;
+        margin-bottom: 28px;
+      }
+      .footer-contact {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+      .contact-item {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(45, 226, 230, 0.1);
+        border: 1px solid rgba(45, 226, 230, 0.3);
+        padding: 14px 28px;
+        border-radius: 30px;
+        color: white;
+        font-size: 1rem;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+      .contact-item:hover {
+        background: var(--accent-cyan);
+        color: var(--primary-dark);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(45, 226, 230, 0.3);
+      }
+      .footer p {
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 0.85rem;
+      }
+
+      /* Animations */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .card {
+        animation: fadeInUp 0.6s ease forwards;
+        opacity: 0;
+      }
+      .card:nth-child(1) {
+        animation-delay: 0.1s;
+      }
+      .card:nth-child(2) {
+        animation-delay: 0.15s;
+      }
+      .card:nth-child(3) {
+        animation-delay: 0.2s;
+      }
+      .card:nth-child(4) {
+        animation-delay: 0.25s;
+      }
+      .card:nth-child(5) {
+        animation-delay: 0.3s;
+      }
+      .card:nth-child(6) {
+        animation-delay: 0.35s;
+      }
+      .card:nth-child(7) {
+        animation-delay: 0.4s;
+      }
+
+      @media (max-width: 768px) {
+        .top-nav {
+          padding: 12px 16px;
+        }
+        .nav-logo {
+          font-size: 1.2rem;
+        }
+        .nav-subtitle {
+          font-size: 0.65rem;
+        }
+        .hero {
+          padding: 100px 20px 0;
+        }
+        .hook-title {
+          margin-bottom: 45px;
+        }
+        .glocal-grid {
+          grid-template-columns: 1fr;
+          gap: 12px;
+        }
+        .partners-banner {
+          gap: 30px;
+          padding: 20px;
+        }
+        .partner-logo {
+          height: 22px;
+        }
+        .cards-grid {
+          grid-template-columns: 1fr;
+          gap: 20px;
+        }
+        .card-image-wrapper {
+          width: 100%;
+          height: 280px;
+          overflow: hidden;
+          position: relative;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 상단 고정 네비게이션 -->
+    <nav class="top-nav">
+      <div class="nav-logo">
+        <img src="images/logos/link21-logo.png" alt="Link21" />
+      </div>
+      <div class="nav-subtitle">Global AI Tech & Agent Innovation Center</div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+      <div class="hero-content">
+        <!-- 후킹 타이틀 -->
+        <div class="hook-title">
+          <h1>배우면 <span>바로 쓰는</span> 진짜 AI 실무 교육</h1>
+          <p>
+            이론만 가르치는 교육은 그만, 현장에서 바로 적용하는 실전 AI 역량
+          </p>
+        </div>
+      </div>
+
+      <!-- Glocal Section -->
+      <div class="glocal-section">
+        <div class="glocal-content">
+          <h2 class="glocal-title">
+            Global + Local = <span>Glocal Innovation Hub</span>
+          </h2>
+          <div class="glocal-grid">
+            <div class="glocal-item">
+              <p>Microsoft·Meta 등 글로벌 AI 파트너십 운영</p>
+            </div>
+            <div class="glocal-item">
+              <p>RISE 지역 AI 트랜스포메이션 프로젝트 다수 진행</p>
+            </div>
+            <div class="glocal-item">
+              <p>기업·공공·교육 분야 AI 자동화·에이전트 연구 및 실증</p>
+            </div>
+            <div class="glocal-item">
+              <p>AI 전문가 교육·생태계 구축 및 DX·AX 자문</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Partners Banner -->
+      <div class="partners-banner">
+        <div class="partner-item">
+          <img
+            src="images/logos/microsoft.png"
+            alt="Microsoft"
+            class="partner-logo"
+          />
+          <p class="partner-desc">AI · 클라우드</p>
+        </div>
+        <div class="partner-item">
+          <img src="images/logos/adobe.png" alt="Adobe" class="partner-logo" />
+          <p class="partner-desc">디자인 · 영상</p>
+        </div>
+        <div class="partner-item">
+          <img src="images/logos/meta.png" alt="Meta" class="partner-logo" />
+          <p class="partner-desc">XR · 마케팅</p>
+        </div>
+        <div class="partner-item">
+          <img
+            src="images/logos/autodesk.png"
+            alt="Autodesk"
+            class="partner-logo"
+          />
+          <p class="partner-desc">설계 · 엔지니어링</p>
+        </div>
+        <div class="partner-item">
+          <img src="images/logos/unity.png" alt="Unity" class="partner-logo" />
+          <p class="partner-desc">3D · 게임</p>
+        </div>
+      </div>
+    </header>
+
+    <!-- Programs Header -->
+    <section class="programs-header">
+      <h2>주요 강의 및 프로젝트 레퍼런스</h2>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <section class="section-header">
+        <h2>교육 프로그램</h2>
+        <p>AI 시대를 선도하는 실무 중심 교육 과정</p>
+      </section>
+      <div class="cards-grid">
+        <article class="card" onclick="openModal(0)">
+          <div class="card-image-wrapper">
+            <img
+              src="images/img1.jpg"
+              alt="생성형 AI 프롬프트 전문교육과정"
+              class="card-image"
+            />
+            <div class="card-overlay">
+              <div class="click-hint">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" /></svg
+                >클릭하여 크게 보기
+              </div>
+            </div>
+          </div>
+          <div class="card-content">
+            <span class="card-badge green">프롬프트</span>
+            <h3 class="card-title">생성형 AI 프롬프트 전문교육과정</h3>
+          </div>
+        </article>
+        <article class="card" onclick="openModal(1)">
+          <div class="card-image-wrapper">
+            <img
+              src="images/img2.png"
+              alt="AI로 확장되는 동물자원학"
+              class="card-image"
+            />
+            <div class="card-overlay">
+              <div class="click-hint">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" /></svg
+                >클릭하여 크게 보기
+              </div>
+            </div>
+          </div>
+          <div class="card-content">
+            <span class="card-badge blue">MS</span>
+            <h3 class="card-title">
+              AI로 확장되는 동물자원학 - TOEIC 900 보다 MCF AI-900
+            </h3>
+          </div>
+        </article>
+        <article class="card" onclick="openModal(2)">
+          <div class="card-image-wrapper">
+            <img
+              src="images/img3.jpg"
+              alt="IT 시스템관리 칼퇴 프로젝트"
+              class="card-image"
+            />
+            <div class="card-overlay">
+              <div class="click-hint">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" /></svg
+                >클릭하여 크게 보기
+              </div>
+            </div>
+          </div>
+          <div class="card-content">
+            <span class="card-badge green">프롬프트</span>
+            <h3 class="card-title">
+              IT 시스템관리 - GPT로 기획·설계해서 칼퇴하세요
+            </h3>
+          </div>
+        </article>
+        <article class="card" onclick="openModal(3)">
+          <div class="card-image-wrapper">
+            <img
+              src="images/img4.jpg"
+              alt="동강대 MCF AI-900"
+              class="card-image"
+            />
+            <div class="card-overlay">
+              <div class="click-hint">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" /></svg
+                >클릭하여 크게 보기
+              </div>
+            </div>
+          </div>
+          <div class="card-content">
+            <span class="card-badge blue">MS</span>
+            <h3 class="card-title">TOEIC 900 보다 MCF AI-900</h3>
+          </div>
+        </article>
+        <article class="card" onclick="openModal(4)">
+          <div class="card-image-wrapper">
+            <img
+              src="images/img5.png"
+              alt="호남대 실전형 AI-900"
+              class="card-image"
+            />
+            <div class="card-overlay">
+              <div class="click-hint">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" /></svg
+                >클릭하여 크게 보기
+              </div>
+            </div>
+          </div>
+          <div class="card-content">
+            <span class="card-badge blue">MS</span
+            ><span class="card-badge green">프롬프트</span>
+            <h3 class="card-title">
+              시험만 보고 끝? NO - 실무에서 바로 쓰는 실전형 AI-900
+            </h3>
+          </div>
+        </article>
+        <article class="card" onclick="openModal(5)">
+          <div class="card-image-wrapper">
+            <img
+              src="images/img6.png"
+              alt="광주 시민 대상 생활 AI"
+              class="card-image"
+            />
+            <div class="card-overlay">
+              <div class="click-hint">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" /></svg
+                >클릭하여 크게 보기
+              </div>
+            </div>
+          </div>
+          <div class="card-content">
+            <span class="card-badge green">프롬프트</span>
+            <h3 class="card-title">
+              광주에서 먼저 바꾸는 일상! 오늘 배워 오늘 적용하는 생활 AI
+            </h3>
+          </div>
+        </article>
+        <article class="card" onclick="openModal(6)">
+          <div class="card-image-wrapper">
+            <img
+              src="images/img7.png"
+              alt="AI와 함께하는 행정혁신"
+              class="card-image"
+            />
+            <div class="card-overlay">
+              <div class="click-hint">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" /></svg
+                >클릭하여 크게 보기
+              </div>
+            </div>
+          </div>
+          <div class="card-content">
+            <span class="card-badge green">프롬프트</span>
+            <h3 class="card-title">
+              AI와 함께하는 행정혁신 - AI 비서 실전 구축 과정
+            </h3>
+          </div>
+        </article>
+      </div>
+    </main>
+
+    <!-- Footer CTA -->
+    <footer class="footer">
+      <h2 class="footer-title">
+        광주 · 전남 유일 5개 글로벌 인증시험센터 <span>링크21</span>
+      </h2>
+      <p class="footer-cta">교육문의 상담</p>
+      <div class="footer-contact">
+        <a href="tel:062-513-1060" class="contact-item">📞 062-513-1060</a>
+        <a href="tel:010-3818-1713" class="contact-item">📱 010-3818-1713</a>
+        <a href="mailto:agaaga23@naver.com" class="contact-item"
+          >✉️ agaaga23@naver.com</a
+        >
+      </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal-overlay" id="modal" onclick="closeModal(event)">
+      <div class="modal-content" onclick="event.stopPropagation()">
+        <button class="modal-close" onclick="closeModal(event)">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M18 6L6 18M6 6l12 12" />
+          </svg>
+        </button>
+        <img src="" alt="" class="modal-image" id="modal-image" />
+        <p class="modal-title" id="modal-title"></p>
+      </div>
+    </div>
+
+    <script>
+      const programs = [
+        {
+          src: "images/img1.jpg",
+          title: "생성형 AI 프롬프트 전문교육과정 (전남대)",
+        },
+        {
+          src: "images/img2.png",
+          title:
+            "AI로 확장되는 동물자원학 - TOEIC 900 보다 MCF AI-900 (전남대)",
+        },
+        {
+          src: "images/img3.jpg",
+          title: "IT 시스템관리 - GPT로 기획·설계해서 칼퇴하세요 (산기협)",
+        },
+        {
+          src: "images/img4.jpg",
+          title: "TOEIC 900 보다 MCF AI-900 (동강대)",
+        },
+        {
+          src: "images/img5.png",
+          title:
+            "시험만 보고 끝? NO - 실무에서 바로 쓰는 실전형 AI-900 (호남대)",
+        },
+        {
+          src: "images/img6.png",
+          title:
+            "광주에서 먼저 바꾸는 일상! 오늘 배워 오늘 적용하는 생활 AI (전남대 RISE)",
+        },
+        {
+          src: "images/img7.png",
+          title:
+            "AI와 함께하는 행정혁신 - AI 비서 실전 구축 과정 (전남대 재직자)",
+        },
+      ];
+      function openModal(index) {
+        const modal = document.getElementById("modal");
+        document.getElementById("modal-image").src = programs[index].src;
+        document.getElementById("modal-title").textContent =
+          programs[index].title;
+        modal.classList.add("active");
+        document.body.style.overflow = "hidden";
+      }
+      function closeModal(event) {
+        document.getElementById("modal").classList.remove("active");
+        document.body.style.overflow = "";
+      }
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeModal();
+      });
+    </script>
+  </body>
+</html>
