@@ -915,6 +915,15 @@
         .field-grid {
           grid-template-columns: 1fr;
         }
+        .footer-contact {
+          flex-direction: column;
+          align-items: center;
+        }
+        .contact-item {
+          width: 100%;
+          max-width: 300px;
+          justify-content: center;
+        }
       }
     </style>
   </head>
@@ -1533,7 +1542,7 @@
     <main class="main-content">
       <section class="section-header">
         <h2>주요 강의 및 프로젝트 레퍼런스</h2>
-        <p>대학·기업·기관과 함께한 AI 교육 프로그램</p>
+        <p>기업·대학·기관과 함께한 다양한 맞춤형 AI 교육</p>
       </section>
       <div class="cards-grid">
         <!-- 7번 -->
@@ -1773,8 +1782,11 @@
       <div class="footer-contact">
         <a href="tel:062-513-1060" class="contact-item">📞 062-513-1060</a>
         <a href="tel:010-3818-1713" class="contact-item">📱 010-3818-1713</a>
-        <a href="mailto:agaaga23@naver.com" class="contact-item"
+        <a href="#" class="contact-item" onclick="copyEmail(event)"
           >✉️ agaaga23@naver.com</a
+        >
+        <a href="https://www.link21edu.com" target="_blank" class="contact-item"
+          >🌐 www.link21edu.com</a
         >
       </div>
     </footer>
@@ -1912,6 +1924,12 @@
       document.querySelectorAll(".card").forEach((card) => {
         observer.observe(card);
       });
+
+      function copyEmail(e) {
+        e.preventDefault();
+        navigator.clipboard.writeText("agaaga23@naver.com");
+        alert("이메일 주소가 복사되었습니다!");
+      }
     </script>
   </body>
 </html>
