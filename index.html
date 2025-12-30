@@ -54,6 +54,16 @@
         --gradient-hero: linear-gradient(180deg, #0a1628 0%, #122a4a 100%);
         --shadow-card: 0 4px 24px rgba(0, 102, 255, 0.08);
         --shadow-hover: 0 12px 40px rgba(0, 102, 255, 0.15);
+        /* 브랜드 공식 컬러 */
+        --ms-red: #f25022;
+        --ms-green: #7fba00;
+        --ms-blue: #00a4ef;
+        --ms-yellow: #ffb900;
+        --adobe-red: #ff0000;
+        --prompt-green: #10a37f;
+        --meta-blue: #0082fb;
+        --unity-white: #ffffff;
+        --autodesk-green: #00ae42;
 
         /* 폰트 변수 */
         --font-body: "Noto Sans KR", sans-serif;
@@ -507,6 +517,30 @@
         justify-content: center;
         font-size: 1.4rem;
       }
+      .field-icon svg {
+        width: 24px;
+        height: 24px;
+        fill: white;
+      }
+      /* 브랜드별 field-icon 배경색 */
+      .field-icon.ms {
+        background: linear-gradient(135deg, #00a4ef, #0078d4);
+      }
+      .field-icon.adobe {
+        background: linear-gradient(135deg, #ff0000, #cc0000);
+      }
+      .field-icon.prompt {
+        background: linear-gradient(135deg, #10a37f, #0d8c6d);
+      }
+      .field-icon.autodesk {
+        background: linear-gradient(135deg, #00ae42, #008c35);
+      }
+      .field-icon.meta {
+        background: linear-gradient(135deg, #0082fb, #0064c8);
+      }
+      .field-icon.unity {
+        background: linear-gradient(135deg, #222c37, #000000);
+      }
       .field-card-header h3 {
         color: white;
         font-size: 1.1rem;
@@ -553,6 +587,72 @@
         border-radius: 12px;
         margin-right: 6px;
         margin-bottom: 6px;
+      }
+      /* 브랜드별 border 스타일 */
+      .course-item.ms-red {
+        border-left-color: var(--ms-red);
+      }
+      .course-item.ms-green {
+        border-left-color: var(--ms-green);
+      }
+      .course-item.ms-blue {
+        border-left-color: var(--ms-blue);
+      }
+      .course-item.ms-yellow {
+        border-left-color: var(--ms-yellow);
+      }
+      .course-item.adobe {
+        border-left-color: var(--adobe-red);
+      }
+      .course-item.prompt {
+        border-left-color: var(--prompt-green);
+      }
+      .course-item.meta {
+        border-left-color: var(--meta-blue);
+      }
+      .course-item.unity {
+        border-left-color: var(--unity-white);
+      }
+      .course-item.autodesk {
+        border-left-color: var(--autodesk-green);
+      }
+
+      /* 브랜드별 badge 스타일 */
+      .course-badge.ms-red {
+        background: rgba(242, 80, 34, 0.2);
+        color: var(--ms-red);
+      }
+      .course-badge.ms-green {
+        background: rgba(127, 186, 0, 0.2);
+        color: var(--ms-green);
+      }
+      .course-badge.ms-blue {
+        background: rgba(0, 164, 239, 0.2);
+        color: var(--ms-blue);
+      }
+      .course-badge.ms-yellow {
+        background: rgba(255, 185, 0, 0.2);
+        color: var(--ms-yellow);
+      }
+      .course-badge.adobe {
+        background: rgba(255, 0, 0, 0.2);
+        color: var(--adobe-red);
+      }
+      .course-badge.prompt {
+        background: rgba(16, 163, 127, 0.2);
+        color: var(--prompt-green);
+      }
+      .course-badge.meta {
+        background: rgba(0, 130, 251, 0.2);
+        color: var(--meta-blue);
+      }
+      .course-badge.unity {
+        background: rgba(255, 255, 255, 0.15);
+        color: var(--unity-white);
+      }
+      .course-badge.autodesk {
+        background: rgba(0, 174, 66, 0.2);
+        color: var(--autodesk-green);
       }
 
       /* Modal */
@@ -1077,30 +1177,43 @@
             <!-- Microsoft -->
             <div class="field-card">
               <div class="field-card-header">
-                <div class="field-icon">☁️</div>
+                <div class="field-icon ms">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="28"
+                    height="28"
+                    viewBox="0 0 24 24"
+                    fill="white"
+                  >
+                    <path
+                      d="M0 0h11.5v11.5H0V0zm12.5 0H24v11.5H12.5V0zM0 12.5h11.5V24H0V12.5zm12.5 0H24V24H12.5V12.5z"
+                    />
+                  </svg>
+                </div>
+
                 <div>
-                  <h3>Microsoft 라이선스</h3>
+                  <h3>Microsoft 라이선스 (MCF)</h3>
                   <span>AI · 클라우드 · 데이터 · 보안</span>
                 </div>
               </div>
               <div class="course-list">
-                <div class="course-item">
-                  <span class="course-badge">AI</span>
+                <div class="course-item ms-red">
+                  <span class="course-badge ms-red">AI</span>
                   <h4>AI-900 : Azure AI Fundamentals</h4>
                   <p>인공지능 입문, 머신러닝, 컴퓨터 비전, 자연어 처리</p>
                 </div>
-                <div class="course-item">
-                  <span class="course-badge">클라우드</span>
+                <div class="course-item ms-green">
+                  <span class="course-badge ms-green">클라우드</span>
                   <h4>AZ-900 : Azure Fundamentals</h4>
                   <p>클라우드 개념, 애저 워크로드, 솔루션, 시큐리티</p>
                 </div>
-                <div class="course-item">
-                  <span class="course-badge">데이터</span>
+                <div class="course-item ms-blue">
+                  <span class="course-badge ms-blue">데이터</span>
                   <h4>DP-900 : Azure Data Fundamentals</h4>
                   <p>빅데이터 입문, 관계형/비관계형 데이터, Cosmos DB</p>
                 </div>
-                <div class="course-item">
-                  <span class="course-badge">보안</span>
+                <div class="course-item ms-yellow">
+                  <span class="course-badge ms-yellow">보안</span>
                   <h4>SC-900 : Security Fundamentals</h4>
                   <p>보안 및 규정 준수, Microsoft Entra, 보안 솔루션</p>
                 </div>
@@ -1110,31 +1223,43 @@
             <!-- Adobe -->
             <div class="field-card">
               <div class="field-card-header">
-                <div class="field-icon">🎨</div>
+                <div class="field-icon adobe">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="28"
+                    height="28"
+                    viewBox="0 0 24 24"
+                    fill="white"
+                  >
+                    <path
+                      d="M14.5 3H24v18L14.5 3zM9.5 3H0v18L9.5 3zM12 9.5L16.5 21h-4l-1.5-4h-3L12 9.5z"
+                    />
+                  </svg>
+                </div>
                 <div>
                   <h3>Adobe 라이선스 (ACP)</h3>
                   <span>디자인 · 영상 · 콘텐츠 제작</span>
                 </div>
               </div>
               <div class="course-list">
-                <div class="course-item">
-                  <span class="course-badge">그래픽</span>
-                  <h4>ACP Illustrator</h4>
+                <div class="course-item adobe">
+                  <span class="course-badge adobe">그래픽</span>
+                  <h4>Illustrator</h4>
                   <p>도형/패스 그리기, 텍스트 편집, 심볼과 패턴</p>
                 </div>
-                <div class="course-item">
-                  <span class="course-badge">이미지</span>
-                  <h4>ACP Photoshop</h4>
+                <div class="course-item adobe">
+                  <span class="course-badge adobe">이미지</span>
+                  <h4>Photoshop</h4>
                   <p>이미지 편집, 레이어 조작, 합성/보정, 필터 효과</p>
                 </div>
-                <div class="course-item">
-                  <span class="course-badge">편집</span>
-                  <h4>ACP InDesign</h4>
+                <div class="course-item adobe">
+                  <span class="course-badge adobe">편집</span>
+                  <h4>InDesign</h4>
                   <p>레이아웃 설정, 아이덴티티/페이지물 편집디자인</p>
                 </div>
-                <div class="course-item">
-                  <span class="course-badge">영상</span>
-                  <h4>ACP Premiere Pro</h4>
+                <div class="course-item adobe">
+                  <span class="course-badge adobe">영상</span>
+                  <h4>Premiere Pro</h4>
                   <p>영상 편집, 오디오, 타이틀, 내보내기</p>
                 </div>
               </div>
@@ -1143,25 +1268,37 @@
             <!-- 생성형 AI -->
             <div class="field-card">
               <div class="field-card-header">
-                <div class="field-icon">🤖</div>
+                <div class="field-icon prompt">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="28"
+                    height="28"
+                    viewBox="0 0 24 24"
+                    fill="white"
+                  >
+                    <path
+                      d="M22.282 9.821a5.985 5.985 0 0 0-.516-4.91 6.046 6.046 0 0 0-6.51-2.9A6.065 6.065 0 0 0 4.981 4.18a5.985 5.985 0 0 0-3.998 2.9 6.046 6.046 0 0 0 .743 7.097 5.98 5.98 0 0 0 .51 4.911 6.051 6.051 0 0 0 6.515 2.9A5.985 5.985 0 0 0 13.26 24a6.056 6.056 0 0 0 5.772-4.206 5.99 5.99 0 0 0 3.997-2.9 6.056 6.056 0 0 0-.747-7.073zM13.26 22.43a4.476 4.476 0 0 1-2.876-1.04l.141-.081 4.779-2.758a.795.795 0 0 0 .392-.681v-6.737l2.02 1.168a.071.071 0 0 1 .038.052v5.583a4.504 4.504 0 0 1-4.494 4.494zM3.6 18.304a4.47 4.47 0 0 1-.535-3.014l.142.085 4.783 2.759a.771.771 0 0 0 .78 0l5.843-3.369v2.332a.08.08 0 0 1-.033.062L9.74 19.95a4.5 4.5 0 0 1-6.14-1.646zM2.34 7.896a4.485 4.485 0 0 1 2.366-1.973V11.6a.766.766 0 0 0 .388.676l5.815 3.355-2.02 1.168a.076.076 0 0 1-.071 0l-4.83-2.786A4.504 4.504 0 0 1 2.34 7.872zm16.597 3.855l-5.833-3.387L15.119 7.2a.076.076 0 0 1 .071 0l4.83 2.791a4.494 4.494 0 0 1-.676 8.105v-5.678a.79.79 0 0 0-.407-.667zm2.01-3.023l-.141-.085-4.774-2.782a.776.776 0 0 0-.785 0L9.409 9.23V6.897a.066.066 0 0 1 .028-.061l4.83-2.787a4.5 4.5 0 0 1 6.68 4.66zm-12.64 4.135l-2.02-1.164a.08.08 0 0 1-.038-.057V6.075a4.5 4.5 0 0 1 7.375-3.453l-.142.08-4.778 2.758a.795.795 0 0 0-.393.681zm1.097-2.365l2.602-1.5 2.607 1.5v2.999l-2.597 1.5-2.607-1.5z"
+                    />
+                  </svg>
+                </div>
                 <div>
                   <h3>생성형 AI 프롬프트</h3>
                   <span>전 학과 공통 · AI 역량 강화</span>
                 </div>
               </div>
               <div class="course-list">
-                <div class="course-item">
-                  <span class="course-badge">취업</span>
+                <div class="course-item prompt">
+                  <span class="course-badge prompt">취업</span>
                   <h4>대학생을 위한 AI 프롬프트 과정</h4>
                   <p>취업 준비, 자기소개서, 포트폴리오 제작 AI 활용</p>
                 </div>
-                <div class="course-item">
-                  <span class="course-badge">전공</span>
+                <div class="course-item prompt">
+                  <span class="course-badge prompt">전공</span>
                   <h4>전공 연계 AI 프롬프트 활용 과정</h4>
                   <p>경영, 공학, 디자인, 인문 등 전공별 맞춤 AI 실습</p>
                 </div>
-                <div class="course-item">
-                  <span class="course-badge">통합</span>
+                <div class="course-item prompt">
+                  <span class="course-badge prompt">통합</span>
                   <h4>라이선스 + 프롬프트 통합 과정</h4>
                   <p>글로벌 라이선스 취득과 실무 프롬프트 활용 동시 학습</p>
                 </div>
@@ -1171,16 +1308,27 @@
             <!-- Autodesk -->
             <div class="field-card">
               <div class="field-card-header">
-                <div class="field-icon">📐</div>
+                <div class="field-icon autodesk">
+                  <svg
+                    role="img"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <title>Autodesk</title>
+                    <path
+                      d="m.129 20.202 14.7-9.136h7.625c.235 0 .445.188.445.445 0 .21-.092.305-.21.375l-7.222 4.323c-.47.283-.633.845-.633 1.265l-.008 2.725H24V4.362a.561.561 0 0 0-.585-.562h-8.752L0 12.893V20.2h.129z"
+                    />
+                  </svg>
+                </div>
                 <div>
                   <h3>Autodesk 라이선스 (ACU)</h3>
                   <span>설계 · 엔지니어링 · CAD</span>
                 </div>
               </div>
               <div class="course-list">
-                <div class="course-item">
-                  <span class="course-badge">CAD</span>
-                  <h4>ACU AutoCAD</h4>
+                <div class="course-item autodesk">
+                  <span class="course-badge autodesk">CAD</span>
+                  <h4>Autodesk Certified User AutoCAD</h4>
                   <p>2D 도면 작성, 좌표 활용, 전개도/지적도 제작 및 출력</p>
                 </div>
               </div>
@@ -1189,15 +1337,26 @@
             <!-- Meta -->
             <div class="field-card">
               <div class="field-card-header">
-                <div class="field-icon">📱</div>
+                <div class="field-icon meta">
+                  <svg
+                    role="img"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <title>Meta</title>
+                    <path
+                      d="M6.915 4.03c-1.968 0-3.683 1.28-4.871 3.113C.704 9.208 0 11.883 0 14.449c0 .706.07 1.369.21 1.973a6.624 6.624 0 0 0 .265.86 5.297 5.297 0 0 0 .371.761c.696 1.159 1.818 1.927 3.593 1.927 1.497 0 2.633-.671 3.965-2.444.76-1.012 1.144-1.626 2.663-4.32l.756-1.339.186-.325c.061.1.121.196.183.3l2.152 3.595c.724 1.21 1.665 2.556 2.47 3.314 1.046.987 1.992 1.22 3.06 1.22 1.075 0 1.876-.355 2.455-.843a3.743 3.743 0 0 0 .81-.973c.542-.939.861-2.127.861-3.745 0-2.72-.681-5.357-2.084-7.45-1.282-1.912-2.957-2.93-4.716-2.93-1.047 0-2.088.467-3.053 1.308-.652.57-1.257 1.29-1.82 2.05-.69-.875-1.335-1.547-1.958-2.056-1.182-.966-2.315-1.303-3.454-1.303zm10.16 2.053c1.147 0 2.188.758 2.992 1.999 1.132 1.748 1.647 4.195 1.647 6.4 0 1.548-.368 2.9-1.839 2.9-.58 0-1.027-.23-1.664-1.004-.496-.601-1.343-1.878-2.832-4.358l-.617-1.028a44.908 44.908 0 0 0-1.255-1.98c.07-.109.141-.224.211-.327 1.12-1.667 2.118-2.602 3.358-2.602zm-10.201.553c1.265 0 2.058.791 2.675 1.446.307.327.737.871 1.234 1.579l-1.02 1.566c-.757 1.163-1.882 3.017-2.837 4.338-1.191 1.649-1.81 1.817-2.486 1.817-.524 0-1.038-.237-1.383-.794-.263-.426-.464-1.13-.464-2.046 0-2.221.63-4.535 1.66-6.088.454-.687.964-1.226 1.533-1.533a2.264 2.264 0 0 1 1.088-.285z"
+                    />
+                  </svg>
+                </div>
                 <div>
                   <h3>Meta 라이선스 (MCDMA)</h3>
                   <span>디지털 마케팅 · 소셜미디어</span>
                 </div>
               </div>
               <div class="course-list">
-                <div class="course-item">
-                  <span class="course-badge">마케팅</span>
+                <div class="course-item meta">
+                  <span class="course-badge meta">마케팅</span>
                   <h4>Meta Digital Marketing Associate</h4>
                   <p>인스타그램 마케팅, 콘텐츠 제작, 메타 광고 설정</p>
                 </div>
@@ -1207,15 +1366,26 @@
             <!-- Unity -->
             <div class="field-card">
               <div class="field-card-header">
-                <div class="field-icon">🎮</div>
+                <div class="field-icon unity">
+                  <svg
+                    role="img"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <title>Unity</title>
+                    <path
+                      d="m12.9288 4.2939 3.7997 2.1929c.1366.077.1415.2905 0 .3675l-4.515 2.6076a.4192.4192 0 0 1-.4246 0L7.274 6.8543c-.139-.0745-.1415-.293 0-.3675l3.7972-2.193V0L1.3758 5.5977V16.793l3.7177-2.1456v-4.3858c-.0025-.1565.1813-.2682.318-.1838l4.5148 2.6076a.4252.4252 0 0 1 .2136.3676v5.2127c.0025.1565-.1813.2682-.3179.1838l-3.7996-2.1929-3.7178 2.1457L12 24l9.6954-5.5977-3.7178-2.1457-3.7996 2.1929c-.1341.082-.3229-.0248-.3179-.1838V13.053c0-.1565.087-.2956.2136-.3676l4.5149-2.6076c.134-.082.3228.0224.3179.1838v4.3858l3.7177 2.1456V5.5977L12.9288 0Z"
+                    />
+                  </svg>
+                </div>
                 <div>
                   <h3>Unity 라이선스 (UCU)</h3>
                   <span>게임 · 3D · 실시간 콘텐츠</span>
                 </div>
               </div>
               <div class="course-list">
-                <div class="course-item">
-                  <span class="course-badge">게임</span>
+                <div class="course-item unity">
+                  <span class="course-badge unity">게임</span>
                   <h4>Unity Certified User</h4>
                   <p>Unity 환경, 2D/3D 콘텐츠 제작, C# 스크립트 기초</p>
                 </div>
