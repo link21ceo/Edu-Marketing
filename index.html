@@ -42,890 +42,7 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Black+Han+Sans&family=Montserrat:wght@500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <style>
-      :root {
-        --primary-blue: #0066ff;
-        --primary-dark: #0a1628;
-        --accent-cyan: #2de2e6;
-        --bg-light: #f8fafc;
-        --bg-card: #ffffff;
-        --text-dark: #1a1a2e;
-        --text-muted: #64748b;
-        --gradient-hero: linear-gradient(180deg, #0a1628 0%, #122a4a 100%);
-        --shadow-card: 0 4px 24px rgba(0, 102, 255, 0.08);
-        --shadow-hover: 0 12px 40px rgba(0, 102, 255, 0.15);
-        /* 브랜드 공식 컬러 */
-        --ms-red: #f25022;
-        --ms-green: #7fba00;
-        --ms-blue: #00a4ef;
-        --ms-yellow: #ffb900;
-        --adobe-red: #ff0000;
-        --prompt-green: #10a37f;
-        --meta-blue: #0082fb;
-        --unity-white: #ffffff;
-        --autodesk-green: #00ae42;
-
-        /* 폰트 변수 */
-        --font-body: "Noto Sans KR", sans-serif;
-        --font-title: "Black Han Sans", sans-serif;
-        --font-english: "Montserrat", sans-serif;
-      }
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      body {
-        font-family: var(--font-body);
-        background: var(--bg-light);
-        color: var(--text-dark);
-        line-height: 1.6;
-        overflow-x: hidden;
-      }
-
-      /* Hero Section */
-      .hero {
-        background: var(--gradient-hero);
-        padding: 130px 20px 0;
-        text-align: center;
-        position: relative;
-        overflow: hidden;
-      }
-      .hero::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: radial-gradient(
-          ellipse at 50% 0%,
-          rgba(45, 226, 230, 0.08) 0%,
-          transparent 60%
-        );
-        pointer-events: none;
-      }
-      .hero-content {
-        position: relative;
-        z-index: 1;
-        max-width: 1000px;
-        margin: 0 auto;
-      }
-
-      /* 후킹 타이틀 */
-      .hook-title {
-        margin-bottom: 60px;
-      }
-      .hook-badge {
-        display: inline-block;
-        background: rgba(45, 226, 230, 0.12);
-        border: 1px solid rgba(45, 226, 230, 0.35);
-        color: var(--accent-cyan);
-        font-family: var(--font-english);
-        font-size: 0.85rem;
-        font-weight: 600;
-        padding: 10px 24px;
-        border-radius: 30px;
-        margin-bottom: 32px;
-        letter-spacing: 0.02em;
-      }
-      .hook-title h1 {
-        font-family: var(--font-title);
-        font-size: clamp(2.4rem, 6vw, 4rem);
-        font-weight: 400;
-        color: white;
-        line-height: 1.3;
-        margin-bottom: 28px;
-        letter-spacing: -0.02em;
-      }
-      .hook-title h1 span {
-        color: white;
-      }
-      .hook-title h1 span#typing-target {
-        background: linear-gradient(90deg, #2de2e6, #0088ff);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-      }
-      .hook-title p {
-        font-size: 1rem;
-        color: hsla(0, 0%, 100%, 0.849);
-        max-width: 580px;
-        margin: 0 auto;
-        line-height: 1.8;
-      }
-
-      /* Glocal Section */
-      .glocal-section {
-        padding: 50px 20px 40px;
-      }
-      .glocal-content {
-        max-width: 1000px;
-        margin: 0 auto;
-      }
-      .glocal-title {
-        font-size: 1.4rem;
-        font-weight: 700;
-        color: white;
-        text-align: center;
-        margin-bottom: 35px;
-      }
-      .glocal-title span {
-        font-family: var(--font-english);
-        color: var(--accent-cyan);
-        font-weight: 700;
-      }
-
-      /* Glocal 그리드 */
-      .glocal-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px 40px;
-        max-width: 800px;
-        margin: 0 auto;
-      }
-      .glocal-item {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        padding: 8px 0;
-      }
-      .glocal-item::before {
-        content: "";
-        width: 6px;
-        height: 6px;
-        background: var(--accent-cyan);
-        border-radius: 50%;
-        flex-shrink: 0;
-      }
-      .glocal-item p {
-        color: rgba(255, 255, 255, 0.85);
-        font-size: 0.95rem;
-        line-height: 1.5;
-        font-weight: 400;
-      }
-
-      /* Partners Banner */
-      .partners-banner {
-        background: rgba(255, 255, 255, 0.97);
-        padding: 24px 30px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 60px;
-        flex-wrap: wrap;
-      }
-      .partner-item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 11px;
-      }
-      .partner-logo {
-        height: 28px;
-        object-fit: contain;
-        transition: transform 0.3s ease;
-      }
-      .partner-item:hover .partner-logo {
-        transform: scale(1.1);
-      }
-      .partner-desc {
-        font-size: small;
-        color: hsl(182, 100%, 16%);
-        font-weight: 600;
-      }
-
-      /* Main Content */
-      .main-content {
-        max-width: 1400px;
-        margin: 0 auto;
-        padding: 60px 20px 100px;
-      }
-      .section-header {
-        text-align: center;
-        margin-bottom: 50px;
-      }
-      .section-header h2 {
-        font-size: clamp(1.5rem, 3vw, 2rem);
-        font-weight: 800;
-        color: var(--text-dark);
-        margin-bottom: 10px;
-      }
-      .section-header p {
-        font-size: 0.95rem;
-        color: var(--text-muted);
-      }
-
-      /* Cards Grid */
-      .cards-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 24px;
-      }
-      .card {
-        background: var(--bg-card);
-        border-radius: 16px;
-        overflow: hidden;
-        box-shadow: var(--shadow-card);
-        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        cursor: pointer;
-        position: relative;
-      }
-      .card:hover {
-        transform: translateY(-6px);
-        box-shadow: var(--shadow-hover);
-      }
-      .card-image-wrapper {
-        height: 280px;
-        overflow: hidden;
-        position: relative;
-      }
-      .card-image {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: top;
-        transition: transform 0.4s ease;
-      }
-      .card:hover .card-image {
-        transform: scale(1.02);
-      }
-      .card-content {
-        padding: 20px 16px;
-      }
-      .card-title {
-        font-size: 0.95rem;
-        font-weight: 700;
-        color: var(--text-dark);
-        text-align: center;
-        line-height: 1.4;
-      }
-      .card-badge {
-        display: inline-block;
-        font-family: var(--font-english);
-        background: linear-gradient(
-          135deg,
-          var(--primary-blue),
-          var(--accent-cyan)
-        );
-        color: white;
-        font-size: 0.7rem;
-        font-weight: 600;
-        padding: 4px 10px;
-        border-radius: 20px;
-        margin-bottom: 10px;
-        margin-right: 6px;
-      }
-      .card-badge:last-of-type {
-        margin-right: 0;
-      }
-      .card-badge.blue {
-        background: linear-gradient(135deg, #0078d4, #00bcf2);
-      }
-      .card-badge.green {
-        background: linear-gradient(135deg, #10b981, #34d399);
-      }
-      .card-badge.orange {
-        background: linear-gradient(135deg, #ff6b35, #f7931e);
-      }
-      .card-badge.purple {
-        background: linear-gradient(135deg, #7c4dff, #b388ff);
-      }
-      .card-badge.sky {
-        background: linear-gradient(135deg, #0ea5e9, #38bdf8);
-      }
-      .card-badge.red {
-        background: linear-gradient(135deg, #ef4444, #f87171);
-      }
-      .card-badge.yellow {
-        background: linear-gradient(135deg, #f59e0b, #fbbf24);
-      }
-      .card-badge.pink {
-        background: linear-gradient(135deg, #ec4899, #f472b6);
-      }
-      .card-badge.teal {
-        background: linear-gradient(135deg, #14b8a6, #2dd4bf);
-      }
-      .card-badge.gray {
-        background: linear-gradient(135deg, #6b7280, #9ca3af);
-      }
-      .card-badge.indigo {
-        background: linear-gradient(135deg, #6366f1, #818cf8);
-      }
-      .card-badge.rose {
-        background: linear-gradient(135deg, #f43f5e, #fb7185);
-      }
-      .card-badge.amber {
-        background: linear-gradient(135deg, #d97706, #fbbf24);
-      }
-      .card-badge.cyan {
-        background: linear-gradient(135deg, #06b6d4, #22d3ee);
-      }
-      .card-badge.navy {
-        background: linear-gradient(135deg, #1e3a5f, #3b5998);
-      }
-      /* Card Overlay */
-      .card-overlay {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        padding: 40px 16px 12px;
-        background: linear-gradient(
-          to top,
-          rgba(0, 0, 0, 0.8) 0%,
-          rgba(0, 0, 0, 0.4) 50%,
-          transparent 100%
-        );
-        opacity: 0;
-        transition: opacity 0.3s ease;
-      }
-      .card:hover .card-overlay {
-        opacity: 1;
-      }
-      .click-hint {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 6px;
-        font-size: 0.75rem;
-        color: white;
-      }
-      .click-hint svg {
-        width: 12px;
-        height: 12px;
-      }
-
-      /* 커리큘럼 섹션 */
-      .curriculum-section {
-        background: var(--gradient-hero);
-        padding: 80px 20px;
-      }
-      .curriculum-container {
-        max-width: 1200px;
-        margin: 0 auto;
-      }
-      .curriculum-header {
-        text-align: center;
-        margin-bottom: 50px;
-      }
-      .curriculum-header h2 {
-        font-size: clamp(1.5rem, 3vw, 2rem);
-        font-weight: 800;
-        color: white;
-        margin-bottom: 10px;
-      }
-
-      .curriculum-header p {
-        font-size: 1rem;
-        color: hsla(0, 0%, 100%, 0.849);
-        max-width: 600px;
-        margin: 0 auto;
-      }
-
-      /* 탭 버튼 */
-      .curriculum-tabs {
-        display: flex;
-        justify-content: center;
-        gap: 16px;
-        margin-bottom: 40px;
-      }
-      .curriculum-tab {
-        background: rgba(255, 255, 255, 0.1);
-        border: 2px solid rgba(255, 255, 255, 0.2);
-        color: white;
-        padding: 16px 32px;
-        border-radius: 30px;
-        font-size: 1rem;
-        font-weight: 600;
-        cursor: pointer;
-        transition: all 0.3s ease;
-      }
-      .curriculum-tab:hover {
-        background: rgba(45, 226, 230, 0.2);
-        border-color: var(--accent-cyan);
-      }
-      .curriculum-tab.active {
-        background: var(--accent-cyan);
-        border-color: var(--accent-cyan);
-        color: var(--primary-dark);
-      }
-      .curriculum-tab span {
-        display: block;
-        font-size: 0.8rem;
-        font-weight: 400;
-        opacity: 0.8;
-        margin-top: 4px;
-      }
-
-      /* 탭 콘텐츠 */
-      .curriculum-content {
-        display: none;
-      }
-      .curriculum-content.active {
-        display: block;
-        animation: fadeIn 0.4s ease;
-      }
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-          transform: translateY(10px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      /* 분야 카드 */
-      .field-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        gap: 24px;
-        max-width: 1200px;
-        margin: 0 auto;
-      }
-      .field-card {
-        background: rgba(255, 255, 255, 0.05);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 16px;
-        padding: 28px;
-        transition: all 0.3s ease;
-      }
-      .field-card:hover {
-        background: rgba(255, 255, 255, 0.08);
-        border-color: var(--accent-cyan);
-        transform: translateY(-4px);
-      }
-      .field-card-header {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        margin-bottom: 20px;
-      }
-      .field-icon {
-        width: 48px;
-        height: 48px;
-        background: linear-gradient(
-          135deg,
-          var(--accent-cyan),
-          var(--primary-blue)
-        );
-        border-radius: 12px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.4rem;
-      }
-      .field-icon svg {
-        width: 24px;
-        height: 24px;
-        fill: white;
-      }
-      /* 브랜드별 field-icon 배경색 */
-      .field-icon.ms {
-        background: linear-gradient(135deg, #00a4ef, #0078d4);
-      }
-      .field-icon.adobe {
-        background: linear-gradient(135deg, #ff0000, #cc0000);
-      }
-      .field-icon.prompt {
-        background: linear-gradient(135deg, #10a37f, #0d8c6d);
-      }
-      .field-icon.autodesk {
-        background: linear-gradient(135deg, #00ae42, #008c35);
-      }
-      .field-icon.meta {
-        background: linear-gradient(135deg, #0082fb, #0064c8);
-      }
-      .field-icon.unity {
-        background: linear-gradient(135deg, #222c37, #000000);
-      }
-      .field-card-header h3 {
-        color: white;
-        font-size: 1.1rem;
-        font-weight: 700;
-      }
-      .field-card-header span {
-        display: block;
-        color: var(--accent-cyan);
-        font-size: 0.8rem;
-        font-weight: 500;
-        margin-top: 2px;
-      }
-
-      /* 과정 리스트 */
-      .course-list {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-      }
-      .course-item {
-        background: rgba(255, 255, 255, 0.03);
-        border-radius: 10px;
-        padding: 14px 16px;
-        border-left: 3px solid var(--accent-cyan);
-      }
-      .course-item h4 {
-        color: white;
-        font-size: 0.95rem;
-        font-weight: 600;
-        margin-bottom: 6px;
-      }
-      .course-item p {
-        color: #ffffffd0;
-        font-size: 0.8rem;
-        line-height: 1.5;
-      }
-      .course-badge {
-        display: inline-block;
-        background: rgba(45, 226, 230, 0.2);
-        color: var(--accent-cyan);
-        font-size: 0.7rem;
-        font-weight: 600;
-        padding: 3px 8px;
-        border-radius: 12px;
-        margin-right: 6px;
-        margin-bottom: 6px;
-      }
-      /* 브랜드별 border 스타일 */
-      .course-item.ms-red {
-        border-left-color: var(--ms-red);
-      }
-      .course-item.ms-green {
-        border-left-color: var(--ms-green);
-      }
-      .course-item.ms-blue {
-        border-left-color: var(--ms-blue);
-      }
-      .course-item.ms-yellow {
-        border-left-color: var(--ms-yellow);
-      }
-      .course-item.adobe {
-        border-left-color: var(--adobe-red);
-      }
-      .course-item.prompt {
-        border-left-color: var(--prompt-green);
-      }
-      .course-item.meta {
-        border-left-color: var(--meta-blue);
-      }
-      .course-item.unity {
-        border-left-color: var(--unity-white);
-      }
-      .course-item.autodesk {
-        border-left-color: var(--autodesk-green);
-      }
-
-      /* 브랜드별 badge 스타일 */
-      .course-badge.ms-red {
-        background: rgba(242, 80, 34, 0.2);
-        color: var(--ms-red);
-      }
-      .course-badge.ms-green {
-        background: rgba(127, 186, 0, 0.2);
-        color: var(--ms-green);
-      }
-      .course-badge.ms-blue {
-        background: rgba(0, 164, 239, 0.2);
-        color: var(--ms-blue);
-      }
-      .course-badge.ms-yellow {
-        background: rgba(255, 185, 0, 0.2);
-        color: var(--ms-yellow);
-      }
-      .course-badge.adobe {
-        background: rgba(255, 0, 0, 0.2);
-        color: var(--adobe-red);
-      }
-      .course-badge.prompt {
-        background: rgba(16, 163, 127, 0.2);
-        color: var(--prompt-green);
-      }
-      .course-badge.meta {
-        background: rgba(0, 130, 251, 0.2);
-        color: var(--meta-blue);
-      }
-      .course-badge.unity {
-        background: rgba(255, 255, 255, 0.15);
-        color: var(--unity-white);
-      }
-      .course-badge.autodesk {
-        background: rgba(0, 174, 66, 0.2);
-        color: var(--autodesk-green);
-      }
-
-      /* Modal */
-      .modal-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(10, 22, 40, 0.95);
-        backdrop-filter: blur(8px);
-        z-index: 1000;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 20px;
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.3s ease;
-      }
-      .modal-overlay.active {
-        opacity: 1;
-        visibility: visible;
-      }
-      .modal-content {
-        max-width: 90vw;
-        max-height: 90vh;
-        position: relative;
-        transform: scale(0.9);
-        transition: transform 0.3s ease;
-      }
-      .modal-overlay.active .modal-content {
-        transform: scale(1);
-      }
-      .modal-image {
-        max-width: 100%;
-        max-height: 80vh;
-        border-radius: 12px;
-        box-shadow: 0 25px 80px rgba(0, 0, 0, 0.5);
-      }
-      .modal-close {
-        position: absolute;
-        top: -20px;
-        right: -60px;
-        background: white;
-        border: none;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: all 0.3s ease;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-      }
-      .modal-close:hover {
-        background: var(--accent-cyan);
-        transform: rotate(90deg);
-      }
-      .modal-close svg {
-        width: 18px;
-        height: 18px;
-      }
-      .modal-title {
-        color: white;
-        font-size: 1rem;
-        font-weight: 600;
-        text-align: center;
-        margin-top: 16px;
-        opacity: 0.9;
-      }
-
-      /* Footer CTA */
-      .footer {
-        background: linear-gradient(
-          135deg,
-          #0a1628 0%,
-          #1a3a5c 50%,
-          #0a1628 100%
-        );
-        padding: 60px 20px;
-        text-align: center;
-        border-top: 2px solid var(--accent-cyan);
-      }
-      .footer-title {
-        color: white;
-        font-size: clamp(1.5rem, 4vw, 1.9rem);
-        font-weight: 900;
-        margin-bottom: 35px;
-        line-height: 1.4;
-      }
-      .footer-title span {
-        color: var(--accent-cyan);
-        text-shadow: 0 0 30px rgba(45, 226, 230, 0.5);
-      }
-      .footer-cta {
-        color: hsla(0, 0%, 100%, 0.849);
-        font-weight: 500;
-        margin-bottom: 28px;
-      }
-      .footer-contact {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-        flex-wrap: wrap;
-      }
-      .contact-item {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        background: rgba(45, 226, 230, 0.1);
-        border: 1px solid rgba(45, 226, 230, 0.3);
-        padding: 14px 28px;
-        border-radius: 30px;
-        color: white;
-        font-size: 1rem;
-        font-weight: 600;
-        text-decoration: none;
-        transition: all 0.3s ease;
-      }
-      .contact-item:hover {
-        background: var(--accent-cyan);
-        color: var(--primary-dark);
-        transform: translateY(-2px);
-        box-shadow: 0 8px 25px rgba(45, 226, 230, 0.3);
-      }
-      .footer p {
-        color: rgba(255, 255, 255, 0.5);
-        font-size: 0.85rem;
-      }
-
-      /* 명함 섹션 */
-      .namecard-section {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 24px;
-        flex-wrap: wrap;
-        margin-bottom: 40px;
-      }
-      .namecard-section img {
-        max-width: 340px;
-        width: 100%;
-        border-radius: 12px;
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-      .namecard-section img:hover {
-        transform: translateY(-4px) scale(1.02);
-        box-shadow: 0 12px 40px rgba(45, 226, 230, 0.2);
-      }
-
-      /* 페이드인 효과 */
-      .fade-in.white {
-        color: white;
-      }
-      .fade-in {
-        opacity: 0;
-        animation: fadeInText 1s ease forwards;
-      }
-
-      @keyframes fadeInText {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      /* 타이핑 영역 숨김 (시작 전) */
-      #typing-target {
-        opacity: 0;
-      }
-      #typing-target.show {
-        opacity: 1;
-      }
-
-      /* 스크롤 애니메이션 */
-      .card {
-        opacity: 0;
-        transform: translateY(30px);
-        transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-      }
-      .card.visible {
-        opacity: 1;
-        transform: translateY(0);
-      }
-      .card:nth-child(1) {
-        transition-delay: 0.1s;
-      }
-      .card:nth-child(2) {
-        transition-delay: 0.15s;
-      }
-      .card:nth-child(3) {
-        transition-delay: 0.2s;
-      }
-      .card:nth-child(4) {
-        transition-delay: 0.25s;
-      }
-      .card:nth-child(5) {
-        transition-delay: 0.3s;
-      }
-      .card:nth-child(6) {
-        transition-delay: 0.35s;
-      }
-      .card:nth-child(7) {
-        transition-delay: 0.4s;
-      }
-      .card:nth-child(8) {
-        transition-delay: 0.45s;
-      }
-
-      @media (max-width: 768px) {
-        .hero {
-          padding: 80px 20px 0;
-        }
-        .hook-title {
-          margin-bottom: 45px;
-        }
-        .hook-badge {
-          font-size: 0.75rem;
-          padding: 8px 18px;
-        }
-        .glocal-grid {
-          grid-template-columns: 1fr;
-          gap: 12px;
-        }
-        .partners-banner {
-          gap: 30px;
-          padding: 20px;
-        }
-        .partner-logo {
-          height: 22px;
-        }
-        .cards-grid {
-          grid-template-columns: 1fr;
-          gap: 24px;
-        }
-        .card-image-wrapper {
-          width: 100%;
-          height: 280px;
-          overflow: hidden;
-          position: relative;
-          border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-        }
-        .curriculum-tabs {
-          flex-direction: column;
-          align-items: center;
-        }
-        .curriculum-tab {
-          width: 100%;
-          max-width: 300px;
-          text-align: center;
-        }
-        .field-grid {
-          grid-template-columns: 1fr;
-        }
-        .footer-contact {
-          flex-direction: column;
-          align-items: center;
-        }
-        .contact-item {
-          width: 100%;
-          max-width: 300px;
-          justify-content: center;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <!-- Hero Section -->
@@ -1206,22 +323,34 @@
                 </div>
               </div>
               <div class="course-list">
-                <div class="course-item ms-red">
+                <div
+                  class="course-item ms-red clickable"
+                  onclick="openCurriculumModal('ai900')"
+                >
                   <span class="course-badge ms-red">AI</span>
                   <h4>AI-900 : Azure AI Fundamentals</h4>
                   <p>인공지능 입문, 머신러닝, 컴퓨터 비전, 자연어 처리</p>
                 </div>
-                <div class="course-item ms-green">
+                <div
+                  class="course-item ms-green clickable"
+                  onclick="openCurriculumModal('az900')"
+                >
                   <span class="course-badge ms-green">클라우드</span>
                   <h4>AZ-900 : Azure Fundamentals</h4>
                   <p>클라우드 개념, 애저 워크로드, 솔루션, 시큐리티</p>
                 </div>
-                <div class="course-item ms-blue">
+                <div
+                  class="course-item ms-blue clickable"
+                  onclick="openCurriculumModal('dp900')"
+                >
                   <span class="course-badge ms-blue">데이터</span>
                   <h4>DP-900 : Azure Data Fundamentals</h4>
                   <p>빅데이터 입문, 관계형/비관계형 데이터, Cosmos DB</p>
                 </div>
-                <div class="course-item ms-yellow">
+                <div
+                  class="course-item ms-yellow clickable"
+                  onclick="openCurriculumModal('sc900')"
+                >
                   <span class="course-badge ms-yellow">보안</span>
                   <h4>SC-900 : Security Fundamentals</h4>
                   <p>보안 및 규정 준수, Microsoft Entra, 보안 솔루션</p>
@@ -1251,22 +380,34 @@
                 </div>
               </div>
               <div class="course-list">
-                <div class="course-item adobe">
+                <div
+                  class="course-item adobe clickable"
+                  onclick="openCurriculumModal('illustrator')"
+                >
                   <span class="course-badge adobe">그래픽</span>
                   <h4>Illustrator</h4>
                   <p>도형/패스 그리기, 텍스트 편집, 심볼과 패턴</p>
                 </div>
-                <div class="course-item adobe">
+                <div
+                  class="course-item adobe clickable"
+                  onclick="openCurriculumModal('photoshop')"
+                >
                   <span class="course-badge adobe">이미지</span>
                   <h4>Photoshop</h4>
                   <p>이미지 편집, 레이어 조작, 합성/보정, 필터 효과</p>
                 </div>
-                <div class="course-item adobe">
+                <div
+                  class="course-item adobe clickable"
+                  onclick="openCurriculumModal('indesign')"
+                >
                   <span class="course-badge adobe">편집</span>
                   <h4>InDesign</h4>
                   <p>레이아웃 설정, 아이덴티티/페이지물 편집디자인</p>
                 </div>
-                <div class="course-item adobe">
+                <div
+                  class="course-item adobe clickable"
+                  onclick="openCurriculumModal('premiere')"
+                >
                   <span class="course-badge adobe">영상</span>
                   <h4>Premiere Pro</h4>
                   <p>영상 편집, 오디오, 타이틀, 내보내기</p>
@@ -1296,17 +437,17 @@
                 </div>
               </div>
               <div class="course-list">
-                <div class="course-item prompt">
+                <div class="course-item prompt clickable" onclick="openCurriculumModal('prompt1')">
                   <span class="course-badge prompt">졸업반(3·4학년)</span>
                   <h4>대학생을 위한 AI 프롬프트 과정</h4>
                   <p>취업 준비, 자기소개서, 포트폴리오 제작 AI 활용</p>
                 </div>
-                <div class="course-item prompt">
+                <div class="course-item prompt clickable" onclick="openCurriculumModal('prompt2')">
                   <span class="course-badge prompt">전공 연계</span>
                   <h4>전공 연계 AI 프롬프트 활용 과정</h4>
                   <p>경영, 공학, 디자인, 인문 등 전공별 맞춤 AI 실습</p>
                 </div>
-                <div class="course-item prompt">
+                <div class="course-item prompt clickable" onclick="openCurriculumModal('prompt3')">
                   <span class="course-badge prompt">융합 트랙</span>
                   <h4>라이선스 + 프롬프트 통합 과정</h4>
                   <p>글로벌 라이선스 취득과 실무 프롬프트 활용 동시 학습</p>
@@ -1335,7 +476,10 @@
                 </div>
               </div>
               <div class="course-list">
-                <div class="course-item autodesk">
+                <div
+                  class="course-item autodesk clickable"
+                  onclick="openCurriculumModal('autocad')"
+                >
                   <span class="course-badge autodesk">건축/도시계획</span>
                   <h4>Autodesk Certified User AutoCAD</h4>
                   <p>2D 도면 작성, 좌표 활용, 전개도/지적도 제작 및 출력</p>
@@ -1364,7 +508,10 @@
                 </div>
               </div>
               <div class="course-list">
-                <div class="course-item meta">
+                <div
+                  class="course-item meta clickable"
+                  onclick="openCurriculumModal('meta')"
+                >
                   <span class="course-badge meta">마케팅/경엉</span>
                   <h4>Meta Digital Marketing Associate</h4>
                   <p>인스타그램 마케팅, 콘텐츠 제작, 메타 광고 설정</p>
@@ -1393,7 +540,10 @@
                 </div>
               </div>
               <div class="course-list">
-                <div class="course-item unity">
+                <div
+                  class="course-item unity clickable"
+                  onclick="openCurriculumModal('unity')"
+                >
                   <span class="course-badge unity">게임/미디어콘텐츠</span>
                   <h4>Unity Certified User</h4>
                   <p>Unity 환경, 2D/3D 콘텐츠 제작, C# 스크립트 기초</p>
@@ -1535,6 +685,7 @@
             </div>
           </div>
         </div>
+        <!-- 카드 닫힌 후 </div></div> 전에 -->
       </div>
     </section>
 
@@ -1809,127 +960,65 @@
       </div>
     </div>
 
-    <script>
-      const programs = [
-        {
-          src: "images/img1.png",
-          title: "AI-900 국제 인증 자격증 과정 (전남대)",
-        },
-        {
-          src: "images/img2.png",
-          title: "생성형 AI 프롬프트 전문교육과정 (전남대)",
-        },
-        {
-          src: "images/img3.png",
-          title:
-            "AI로 확장되는 동물자원학 - TOEIC 900 보다 MCF AI-900 (전남대)",
-        },
-        {
-          src: "images/img4.jpg",
-          title: "IT 시스템관리 - GPT로 기획·설계해서 칼퇴하세요 (산기협)",
-        },
-        {
-          src: "images/img5.jpg",
-          title: "TOEIC 900 보다 MCF AI-900 (동강대)",
-        },
-        {
-          src: "images/img6.png",
-          title:
-            "시험만 보고 끝? NO - 실무에서 바로 쓰는 실전형 AI-900 (호남대)",
-        },
-        {
-          src: "images/img7.png",
-          title:
-            "광주에서 먼저 바꾸는 일상! 오늘 배워 오늘 적용하는 생활 AI (전남대 RISE)",
-        },
-        {
-          src: "images/img8.png",
-          title:
-            "AI와 함께하는 행정혁신 - AI 비서 실전 구축 과정 (전남대 재직자)",
-        },
-      ];
+    <!-- 커리큘럼 모달 -->
+    <div
+      class="curriculum-modal"
+      id="curriculumModal"
+      onclick="closeCurriculumModal(event)"
+    >
+      <div class="curriculum-modal-content" onclick="event.stopPropagation()">
+        <button
+          class="curriculum-modal-close"
+          onclick="closeCurriculumModal(event)"
+        >
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M18 6L6 18M6 6l12 12" />
+          </svg>
+        </button>
+        <div class="curriculum-modal-header">
+          <span class="brand-tag" id="modalBrandTag">Microsoft</span>
+          <h2 id="modalTitle">AI-900</h2>
+          <p class="subtitle" id="modalSubtitle">인공지능 입문</p>
+          <div class="meta-info">
+            <span>📅 4일 과정</span>
+            <span>⏱️ 총 20시간</span>
+            <span>👥 30명</span>
+            <span>🎓 자격증 연계</span>
+          </div>
+            <div class="curriculum-notice">
+          <p>
+            ※ 교육 일정, 내용, 인원, 혜택 등은 기관 및 상황에 따라 유동적으로 변경될
+            수 있습니다.
+          </p>
+        </div>
+        </div>
+        <div class="curriculum-modal-body">
+          <div style="margin-bottom: 20px">
+            <h3 class="curriculum-section-title">교육 일정</h3>
+            <table class="schedule-table" id="scheduleTable"></table>
+          </div>
+          <div style="margin-bottom: 20px">
+            <h3 class="curriculum-section-title">교육 내용</h3>
+            <ul class="curriculum-list" id="curriculumList"></ul>
+          </div>
+          <div class="curriculum-footer">
+            <p id="modalFooter"><strong>혜택</strong> 응시 지원</p>
+          </div>
+          <button class="curriculum-modal-close-btn" onclick="closeCurriculumModal(event)">닫기</button>
+        </div>
+      </div>
+    </div>
+        </div>
+      </div>
+    </div>
 
-      // 커리큘럼 탭 전환
-      function switchCurriculumTab(tab) {
-        // 모든 탭 버튼 비활성화
-        document
-          .querySelectorAll(".curriculum-tab")
-          .forEach((btn) => btn.classList.remove("active"));
-        // 클릭한 탭 활성화
-        document
-          .querySelector(
-            `.curriculum-tab[onclick="switchCurriculumTab('${tab}')"]`
-          )
-          .classList.add("active");
-        // 모든 콘텐츠 숨기기
-        document
-          .querySelectorAll(".curriculum-content")
-          .forEach((content) => content.classList.remove("active"));
-        // 해당 콘텐츠 보이기
-        document.getElementById(`tab-${tab}`).classList.add("active");
-      }
-
-      function openModal(index) {
-        const modal = document.getElementById("modal");
-        document.getElementById("modal-image").src = programs[index].src;
-        document.getElementById("modal-title").textContent =
-          programs[index].title;
-        modal.classList.add("active");
-        document.body.style.overflow = "hidden";
-      }
-      function closeModal(event) {
-        document.getElementById("modal").classList.remove("active");
-        document.body.style.overflow = "";
-      }
-      document.addEventListener("keydown", (e) => {
-        if (e.key === "Escape") closeModal();
-      });
-
-      // 타이핑 효과
-      const typingText = "AI 실무";
-      const typingTarget = document.getElementById("typing-target");
-      let charIndex = 0;
-
-      function typeWriter() {
-        if (charIndex < typingText.length) {
-          typingTarget.textContent += typingText.charAt(charIndex);
-          charIndex++;
-          setTimeout(typeWriter, 150);
-        }
-      }
-
-      // 페이지 로드 시 순차 실행
-      window.addEventListener("load", () => {
-        // 1.5초 후 타이핑 시작 (페이드인 완료 후)
-        setTimeout(() => {
-          typingTarget.classList.add("show");
-          typeWriter();
-        }, 1500);
-      });
-
-      const observerOptions = {
-        threshold: 0.1,
-        rootMargin: "0px 0px -50px 0px",
-      };
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-          }
-        });
-      }, observerOptions);
-
-      // 모든 카드에 observer 적용
-      document.querySelectorAll(".card").forEach((card) => {
-        observer.observe(card);
-      });
-
-      function copyEmail(e) {
-        e.preventDefault();
-        navigator.clipboard.writeText("agaaga23@naver.com");
-        alert("이메일 주소가 복사되었습니다!");
-      }
-    </script>
+    <script src="main.js"></script>
   </body>
 </html>
