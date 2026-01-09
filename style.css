@@ -19,6 +19,7 @@
   --meta-blue: #0082fb;
   --unity-white: #ffffff;
   --autodesk-green: #00ae42;
+  --google-blue: #4285f4;
 
   /* 폰트 변수 */
   --font-body: "Noto Sans KR", sans-serif;
@@ -488,6 +489,10 @@ body {
 .field-icon.unity {
   background: linear-gradient(135deg, #222c37, #000000);
 }
+.field-icon.google {
+  background: linear-gradient(135deg, #4285f4, #34a853);
+}
+
 .field-card-header h3 {
   color: white;
   font-size: 1.1rem;
@@ -634,6 +639,9 @@ body {
 .course-item.autodesk {
   border-left-color: var(--autodesk-green);
 }
+.course-item.google {
+  border-left-color: var(--google-blue);
+}
 
 /* 브랜드별 badge 스타일 */
 .course-badge.ms-red {
@@ -671,6 +679,10 @@ body {
 .course-badge.autodesk {
   background: rgba(0, 174, 66, 0.2);
   color: var(--autodesk-green);
+}
+.course-badge.google {
+  background: rgba(66, 133, 244, 0.2);
+  color: var(--google-blue);
 }
 
 /* Modal */
@@ -844,6 +856,11 @@ body {
   background: rgba(255, 255, 255, 0.15);
   color: #fff;
 }
+.brand-tag.google {
+  background: rgba(66, 133, 244, 0.2);
+  color: var(--google-blue);
+}
+
 .curriculum-modal-header h2 {
   color: white;
   font-size: 1.4rem;
