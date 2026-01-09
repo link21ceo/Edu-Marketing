@@ -403,7 +403,7 @@ const curriculumData = {
     brandName: "Google Cloud",
     title: "Google Generative AI Leader",
     duration: "3일 과정",
-    hours: "총 24시간",
+    hours: "총 20시간",
     certification: "자격증 연계",
     subtitle: "생성형 AI 비즈니스 혁신 · Google Cloud AI 제품 · 비즈니스 전략",
     scheduleHTML: `
