@@ -398,34 +398,6 @@ const curriculumData = {
     ],
     footer: "UCU 응시 지원 + 생성형 AI 실무 역량 강화",
   },
-  gail: {
-    brand: "google",
-    brandName: "Google Cloud",
-    title: "Google Generative AI Leader",
-    duration: "3일 과정",
-    hours: "총 20시간",
-    certification: "자격증 연계",
-    subtitle: "생성형 AI 비즈니스 혁신 · Google Cloud AI 제품 · 비즈니스 전략",
-    scheduleHTML: `
-      <thead><tr><th>시간</th><th>1일차</th><th>2일차</th><th>3일차</th></tr></thead>
-      <tbody>
-        <tr><td class="time-col">09:00~10:30</td><td>생성형 AI 개요 및<br>비즈니스 혁신 사례</td><td>Google Cloud AI<br>제품 개요</td><td rowspan="2" class="highlight">시험 응시</td></tr>
-        <tr><td class="time-col">10:30~12:00</td><td>Gemini Advanced 실습</td><td>생성형 AI 핵심 이론</td></tr>
-        <tr><td class="time-col">12:00~13:00</td><td>점심시간</td><td>점심시간</td><td></td></tr>
-        <tr><td class="time-col">13:00~14:30</td><td>NotebookLM · Google AI<br>Studio 실습</td><td>프롬프트 엔지니어링 기법 및<br>출력 개선 전략</td><td></td></tr>
-        <tr><td class="time-col">14:30~16:00</td><td>생성형 AI 에이전트 실습<br>(조직 혁신 관점)</td><td>케이스 기반 문제풀이<br>(비즈니스 전략 적용)</td><td></td></tr>
-        <tr><td class="time-col">16:00~17:30</td><td>실습 결과 공유 및 피드백</td><td>시험 대비 문제풀이 및 Q&A</td><td></td></tr>
-        <tr><td class="time-col">17:30~18:00</td><td>데일리 리뷰 및 정리</td><td>데일리 리뷰 및 정리</td><td></td></tr>
-      </tbody>`,
-    contents: [
-      "생성형 AI의 기본사항 이해",
-      "Google Cloud의 생성형 AI 제품",
-      "생성형 AI 모델 출력을 개선하는 기법",
-      "성공적인 생성형 AI 솔루션을 위한 비즈니스 전략",
-      "Generative AI Leader 시험 응시",
-    ],
-    footer: "Google Generative AI Leader 국제 인증 자격 시험 응시 지원",
-  },
 };
 
 // 커리큘럼 모달 열기
