@@ -32,6 +32,10 @@ const programs = [
     src: "images/img8.png",
     title: "AI와 함께하는 행정혁신 - AI 비서 실전 구축 과정 (전남대 재직자)",
   },
+  {
+    src: "images/img9.png",
+    title: "ChatGPT를 활용한 업무시간 단축과 AX 기반 업무혁신 (재직자)",
+  },
 ];
 
 // 커리큘럼 데이터
@@ -403,6 +407,9 @@ const curriculumData = {
     brandName: "Google Cloud",
     title: "Generative AI Leader",
     subtitle: "생성형 AI 비즈니스 혁신 · Google Cloud AI 제품 · 비즈니스 전략",
+    duration: "3일 과정",
+    hours: "총 20시간",
+    certification: "자격증 연계",
     scheduleHTML: `
       <thead><tr><th>시간</th><th>1일차 (8h) - 실습 중심</th><th>2일차 (8h) - 이론 + 문풀</th><th>3일차 (4h) - 시험 응시</th></tr></thead>
       <tbody>
