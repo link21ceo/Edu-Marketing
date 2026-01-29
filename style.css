@@ -316,6 +316,9 @@ body {
 .card-badge.navy {
   background: linear-gradient(135deg, #1e3a5f, #3b5998);
 }
+.card-badge.google {
+  background: linear-gradient(135deg, #4285f4, #34a853);
+}
 /* Card Overlay */
 .card-overlay {
   position: absolute;
@@ -443,6 +446,9 @@ body {
   border-radius: 16px;
   padding: 28px;
   transition: all 0.3s ease;
+}
+.field-card.google-standalone {
+  margin-bottom: 25px;
 }
 .field-card:hover {
   background: rgba(255, 255, 255, 0.08);
@@ -1060,7 +1066,9 @@ body {
   width: 100%;
   border-radius: 12px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 .namecard-section img:hover {
   transform: translateY(-4px) scale(1.02);

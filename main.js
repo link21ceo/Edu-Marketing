@@ -36,6 +36,10 @@ const programs = [
     src: "images/img9.png",
     title: "ChatGPT를 활용한 업무시간 단축과 AX 기반 업무혁신 (재직자)",
   },
+  {
+    src: "images/img10.png",
+    title: "생성형 AI 리더 교육 강사 과정",
+  },
 ];
 
 // 커리큘럼 데이터
@@ -45,15 +49,16 @@ const curriculumData = {
     brandName: "Microsoft",
     title: "AI-900 : Azure AI Fundamentals",
     subtitle: "인공지능 입문 · 머신러닝 · 컴퓨터 비전 · 자연어 처리",
-    duration: "3일 과정",
+    duration: "4일 과정",
     hours: "총 20시간",
     certification: "자격증 연계",
     scheduleHTML: `
-    <thead><tr><th>시간</th><th>1일차</th><th>2일차</th><th>3일차</th></tr></thead>
+    <thead><tr><th>시간</th><th>1일차</th><th>2일차</th><th>3일차</th><th>4일차</th></tr></thead>
     <tbody>
-      <tr><td class="time-col">09:00~12:00</td><td>AI-900 이론 & 실습<br>(인공지능, 머신러닝,<br>컴퓨터 비전, NLP)</td><td>최종 문제풀이</td><td rowspan="2">맞춤형 버티컬<br>AI 에이전트 설계</td></tr>
-      <tr><td class="time-col">12:00~13:00</td><td>점심시간</td><td>점심시간</td></tr>
-      <tr><td class="time-col">13:00~18:00</td><td>문제풀이</td><td class="highlight">AI-900 시험 응시</td><td></td></tr>
+      <tr><td class="time-col">10:00~12:00</td><td>오리엔테이션<td>컴퓨터 비전</td><td rowspan="4" class="highlight">문제 풀이</td><td class="highlight">AI-900<br>시험 응시</td></tr>
+      <tr><td class="time-col">13:00~15:00</td><td rowspan="2">인공지능 이해하기</td><td>자연어 처리</td></tr>
+      <tr><td class="time-col">15:00~16:30</td><td rowspan="2">대화형 AI</td></tr>
+      <tr><td class="time-col">16:30~17:00</td><td>머신러닝</td></tr>
     </tbody>`,
     contents: [
       "인공지능 입문 및 기본 개념",
@@ -61,24 +66,24 @@ const curriculumData = {
       "컴퓨터 비전 기초",
       "자연어 처리(NLP)",
       "AI-900 문제 풀이 및 시험 응시",
-      "맞춤형 버티컬 AI 에이전트 설계",
     ],
-    footer: "AI-900 응시 지원 + 생성형 AI 실무 역량 강화",
+    footer: "AI-900 응시 지원",
   },
   az900: {
     brand: "ms",
     brandName: "Microsoft",
     title: "AZ-900 : Azure Fundamentals",
-    duration: "3일 과정",
+    duration: "4일 과정",
     hours: "총 20시간",
     certification: "자격증 연계",
     subtitle: "클라우드 개념 · Azure 워크로드 · 솔루션 · 보안",
     scheduleHTML: `
-    <thead><tr><th>시간</th><th>1일차</th><th>2일차</th><th>3일차</th></tr></thead>
+    <thead><tr><th>시간</th><th>1일차</th><th>2일차</th><th>3일차</th><th>4일차</th></tr></thead>
     <tbody>
-      <tr><td class="time-col">09:00~12:00</td><td>AZ-900 이론 & 실습<br>(클라우드 개념, 워크로드,<br>솔루션, 보안)</td><td>최종 문제풀이</td><td rowspan="2">맞춤형 버티컬<br>AI 에이전트 설계</td></tr>
-      <tr><td class="time-col">12:00~13:00</td><td>점심시간</td><td>점심시간</td></tr>
-      <tr><td class="time-col">13:00~18:00</td><td>문제풀이</td><td class="highlight">AZ-900 시험 응시</td><td></td></tr>
+      <tr><td class="time-col">10:00~12:00</td><td>오리엔테이션</td><td>애저 시큐리티</td><td rowspan="4" class="highlight">문제 풀이</td><td class="highlight">AZ-900<br>시험 응시</td></tr>
+      <tr><td class="time-col">13:00~15:00</td><td>클라우드 개념</td><td  rowspan="2">애저 아이덴티티,<br>가버넌스,<br>프라이버시,<br>컴플라이언스</td></tr>
+      <tr><td class="time-col">15:00~16:30</td><td>애저 워크로드</td></tr>
+      <tr><td class="time-col">16:30~17:00</td><td>애저 솔루션</td><td>애저 가격정책 및<br>라이프 사이클</td></tr>
     </tbody>`,
     contents: [
       "클라우드 개념 이해",
@@ -86,24 +91,24 @@ const curriculumData = {
       "Azure 시큐리티 기초",
       "Azure 아이덴티티, 가버넌스",
       "AZ-900 문제 풀이 및 시험 응시",
-      "맞춤형 버티컬 AI 에이전트 설계",
     ],
-    footer: "AZ-900 응시 지원 + 생성형 AI 실무 역량 강화",
+    footer: "AZ-900 응시 지원",
   },
   dp900: {
     brand: "ms",
     brandName: "Microsoft",
     title: "DP-900 : Azure Data Fundamentals",
-    duration: "3일 과정",
+    duration: "4일 과정",
     hours: "총 20시간",
     certification: "자격증 연계",
     subtitle: "빅데이터 입문 · 관계형/비관계형 데이터 · Cosmos DB",
     scheduleHTML: `
-    <thead><tr><th>시간</th><th>1일차</th><th>2일차</th><th>3일차</th></tr></thead>
+    <thead><tr><th>시간</th><th>월</th><th>화</th><th>수</th><th>목</th></tr></thead>
     <tbody>
-      <tr><td class="time-col">09:00~12:00</td><td>DP-900 이론 & 실습<br>(빅데이터, 관계형/비관계형,<br>Cosmos DB)</td><td>최종 문제풀이</td><td rowspan="2">맞춤형 버티컬<br>AI 에이전트 설계</td></tr>
-      <tr><td class="time-col">12:00~13:00</td><td>점심시간</td><td>점심시간</td></tr>
-      <tr><td class="time-col">13:00~18:00</td><td>문제풀이</td><td class="highlight">DP-900 시험 응시</td><td></td></tr>
+      <tr><td class="time-col">10:00~12:00</td><td>오리엔테이션</td><td>관계형 데이터 탐색</td><td rowspan="4" class="highlight">문제 풀이</td><td class="highlight">DP-900<br>시험 응시</td></tr>
+      <tr><td class="time-col">13:00~15:00</td><td>빅데이터 입문</td><td>비관계형 데이터 탐색</td></tr>
+      <tr><td class="time-col">15:00~16:30</td><td>핵심 데이터 개념</td><td>Azure Cosmos DB</td></tr>
+      <tr><td class="time-col">16:30~17:00</td><td>데이터 역할 및<br>서비스 검색</td><td>데이터 웨어하우징</td></tr>
     </tbody>`,
     contents: [
       "빅데이터 입문 및 핵심 개념",
@@ -111,24 +116,25 @@ const curriculumData = {
       "비관계형 데이터 탐색",
       "Azure Cosmos DB",
       "DP-900 문제 풀이 및 시험 응시",
-      "맞춤형 버티컬 AI 에이전트 설계",
     ],
-    footer: "DP-900 응시 지원 + 생성형 AI 실무 역량 강화",
+    footer: "DP-900 응시 지원",
   },
   sc900: {
     brand: "ms",
     brandName: "Microsoft",
     title: "SC-900 : Security Fundamentals",
-    duration: "3일 과정",
+    duration: "4일 과정",
     hours: "총 20시간",
     certification: "자격증 연계",
     subtitle: "보안 및 규정 준수 · Microsoft Entra · 보안 솔루션",
     scheduleHTML: `
-    <thead><tr><th>시간</th><th>1일차</th><th>2일차</th><th>3일차</th></tr></thead>
+    <thead><tr><th>시간</th><th>월</th><th>화</th><th>수</th><th>목</th></tr></thead>
     <tbody>
-      <tr><td class="time-col">09:00~12:00</td><td>SC-900 이론 & 실습<br>(보안, 규정 준수,<br>Microsoft Entra)</td><td>최종 문제풀이</td><td rowspan="2">맞춤형 버티컬<br>AI 에이전트 설계</td></tr>
-      <tr><td class="time-col">12:00~13:00</td><td>점심시간</td><td>점심시간</td></tr>
-      <tr><td class="time-col">13:00~18:00</td><td>문제풀이</td><td class="highlight">SC-900 시험 응시</td><td></td></tr>
+      <tr><td class="time-col">10:00~12:00</td><td>오리엔테이션</td><td>MS 보안 솔루션의<br>기능</td><td rowspan="4" class="highlight">문제 풀이</td><td class="highlight">SC-900<br>시험 응시</td></tr>
+      <tr><td class="time-col">13:00~15:00</td><td rowspan="2">보안 및 규정 준수<br>및 ID의 개념 설명</td><td>MS 보안 솔루션의<br>기능</td></tr>
+      <tr><td class="time-col">15:00~16:30</td><td rowspan="2">Microsoft<br>
+규정 준수<br>솔루션의 기능</tr>
+      <tr><td class="time-col">16:30~17:00</td><td>Microsoft Entra의<br>기능</td></tr>
     </tbody>`,
     contents: [
       "보안 및 규정 준수 개념",
@@ -136,24 +142,24 @@ const curriculumData = {
       "Microsoft Entra 기능",
       "Microsoft 보안 솔루션",
       "SC-900 문제 풀이 및 시험 응시",
-      "맞춤형 버티컬 AI 에이전트 설계",
     ],
-    footer: "SC-900 응시 지원 + 생성형 AI 실무 역량 강화",
+    footer: "SC-900 응시 지원",
   },
   illustrator: {
     brand: "adobe",
     brandName: "Adobe",
     title: "ACP Illustrator",
-    duration: "3일 과정",
+    duration: "4일 과정",
     hours: "총 20시간",
     certification: "자격증 연계",
     subtitle: "벡터 그래픽 · 패스 드로잉 · 텍스트 편집 · 심볼과 패턴",
     scheduleHTML: `
-    <thead><tr><th>시간</th><th>1일차</th><th>2일차</th><th>3일차</th></tr></thead>
+    <thead><tr><th>시간</th><th>월</th><th>화</th><th>수</th><th>목</th></tr></thead>
     <tbody>
-      <tr><td class="time-col">09:00~12:00</td><td>Illustrator 이론 & 실습<br>(도형, 패스, 텍스트,<br>심볼과 패턴)</td><td>최종 문제풀이</td><td rowspan="2">맞춤형 버티컬<br>AI 에이전트 설계</td></tr>
-      <tr><td class="time-col">12:00~13:00</td><td>점심시간</td><td>점심시간</td></tr>
-      <tr><td class="time-col">13:00~18:00</td><td>문제풀이</td><td class="highlight">Illustrator 시험 응시</td><td></td></tr>
+      <tr><td class="time-col">10:00~12:00</td><td>오리엔테이션</td><td>텍스트 편집과<br>스타일링</td><td rowspan="4" class="highlight">문제 풀이</td><td  class="highlight">Illustrator<br>시험 응시</td></tr>
+      <tr><td class="time-col">13:00~15:00</td><td rowspan="2">일러스트<br>기초 교육</td><td>심볼과 패턴</td></tr>
+      <tr><td class="time-col">15:00~16:30</td><td rowspan="2">이미지 편집과<br>트레이싱 및<br>다양한 효과</td></tr>
+      <tr><td class="time-col">16:30~17:00</td><td>도형 및 패스와<br>곡선 그리기</td></tr>
     </tbody>`,
     contents: [
       "일러스트 기본 개요 및 인터페이스",
@@ -161,24 +167,24 @@ const curriculumData = {
       "텍스트 편집과 스타일링",
       "심볼과 패턴 활용",
       "ACP Illustrator 시험 응시",
-      "맞춤형 버티컬 AI 에이전트 설계",
     ],
-    footer: "ACP Illustrator 응시 지원 + 생성형 AI 실무 역량 강화",
+    footer: "ACP Illustrator 응시 지원",
   },
   photoshop: {
     brand: "adobe",
     brandName: "Adobe",
     title: "ACP Photoshop",
-    duration: "3일 과정",
+    duration: "4일 과정",
     hours: "총 20시간",
     certification: "자격증 연계",
     subtitle: "이미지 편집 · 레이어 조작 · 합성/보정 · 필터 효과",
     scheduleHTML: `
-    <thead><tr><th>시간</th><th>1일차</th><th>2일차</th><th>3일차</th></tr></thead>
+    <thead><tr><th>시간</th><th>월</th><th>화</th><th>수</th><th>목</th></tr></thead>
     <tbody>
-      <tr><td class="time-col">09:00~12:00</td><td>Photoshop 이론 & 실습<br>(이미지 편집, 레이어,<br>합성/보정, 필터)</td><td>최종 문제풀이</td><td rowspan="2">맞춤형 버티컬<br>AI 에이전트 설계</td></tr>
-      <tr><td class="time-col">12:00~13:00</td><td>점심시간</td><td>점심시간</td></tr>
-      <tr><td class="time-col">13:00~18:00</td><td>문제풀이</td><td class="highlight">Photoshop 시험 응시</td><td></td></tr>
+      <tr><td class="time-col">10:00~12:00</td><td>오리엔테이션</td><td>텍스트 편집<br>및 타이포그래피</td><td rowspan="4" class="highlight">문제 풀이</td><td class="highlight">Photoshop<br>시험 응시</td></tr>
+      <tr><td class="time-col">13:00~15:00</td><td rowspan="2">포토샵<br>기초 교육</td><td>이미지 합성과 보정</td></tr>
+      <tr><td class="time-col">15:00~16:30</td><td>필터와 효과 활용</td></tr>
+      <tr><td class="time-col">16:30~17:00</td><td>이미지 편집 및<br>선택 도구와<br>레이어 조작</td><td>로고 및<br>아이콘 디자인</td></tr>
     </tbody>`,
     contents: [
       "포토샵 기본 개념 및 인터페이스",
@@ -186,24 +192,24 @@ const curriculumData = {
       "이미지 합성과 보정",
       "필터와 효과 활용",
       "ACP Photoshop 시험 응시",
-      "맞춤형 버티컬 AI 에이전트 설계",
     ],
-    footer: "ACP Photoshop 응시 지원 + 생성형 AI 실무 역량 강화",
+    footer: "ACP Photoshop 응시 지원",
   },
   indesign: {
     brand: "adobe",
     brandName: "Adobe",
     title: "ACP InDesign",
-    duration: "3일 과정",
+    duration: "4일 과정",
     hours: "총 20시간",
     certification: "자격증 연계",
     subtitle: "레이아웃 설정 · 아이덴티티 편집 · 페이지물 디자인",
     scheduleHTML: `
-    <thead><tr><th>시간</th><th>1일차</th><th>2일차</th><th>3일차</th></tr></thead>
+    <thead><tr><th>시간</th><th>월</th><th>화</th><th>수</th><th>목</th></tr></thead>
     <tbody>
-      <tr><td class="time-col">09:00~12:00</td><td>InDesign 이론 & 실습<br>(레이아웃, 색상,<br>편집디자인)</td><td>최종 문제풀이</td><td rowspan="2">맞춤형 버티컬<br>AI 에이전트 설계</td></tr>
-      <tr><td class="time-col">12:00~13:00</td><td>점심시간</td><td>점심시간</td></tr>
-      <tr><td class="time-col">13:00~18:00</td><td>문제풀이</td><td class="highlight">InDesign 시험 응시</td><td></td></tr>
+      <tr><td class="time-col">10:00~12:00</td><td>오리엔테이션</td><td>견본 색상 <br>만들기</td><td rowspan="4" class="highlight">문제 풀이</td><td class="highlight">InDesign<br>시험 응시</td></tr>
+      <tr><td class="time-col">13:00~15:00</td><td rowspan="2">인디자인<br>기초 교육</td><td rowspan="2">인터페이스 및<br>실전 학습</td></tr>
+      <tr><td class="time-col">15:00~16:30</td></tr>
+      <tr><td class="time-col">16:30~17:00</td><td>레이아웃 옵션<br>및 설정</td><td>아이덴티티 /<br>페이지물<br>편집디자인</td></tr>
     </tbody>`,
     contents: [
       "인디자인 특성과 화면 활용법",
@@ -211,24 +217,24 @@ const curriculumData = {
       "견본 색상 만들기",
       "아이덴티티 편집디자인",
       "ACP InDesign 시험 응시",
-      "맞춤형 버티컬 AI 에이전트 설계",
     ],
-    footer: "ACP InDesign 응시 지원 + 생성형 AI 실무 역량 강화",
+    footer: "ACP InDesign 응시 지원",
   },
   premiere: {
     brand: "adobe",
     brandName: "Adobe",
     title: "ACP Premiere Pro",
-    duration: "3일 과정",
+    duration: "4일 과정",
     hours: "총 20시간",
     certification: "자격증 연계",
     subtitle: "영상 편집 · 오디오 편집 · 타이틀 · 내보내기",
     scheduleHTML: `
-    <thead><tr><th>시간</th><th>1일차</th><th>2일차</th><th>3일차</th></tr></thead>
+    <thead><tr><th>시간</th><th>월</th><th>화</th><th>수</th><th>목</th></tr></thead>
     <tbody>
-      <tr><td class="time-col">09:00~12:00</td><td>Premiere 이론 & 실습<br>(영상 편집, 오디오,<br>타이틀, 내보내기)</td><td>최종 문제풀이</td><td rowspan="2">맞춤형 버티컬<br>AI 에이전트 설계</td></tr>
-      <tr><td class="time-col">12:00~13:00</td><td>점심시간</td><td>점심시간</td></tr>
-      <tr><td class="time-col">13:00~18:00</td><td>문제풀이</td><td class="highlight">Premiere 시험 응시</td><td></td></tr>
+      <tr><td class="time-col">10:00~12:00</td><td>오리엔테이션</td><td rowspan="2">영상 편집 기본,<br>효과 및 전환</td><td rowspan="4" class="highlight">문제 풀이</td><td class="highlight">Premiere<br>시험 응시</td></tr>
+      <tr><td class="time-col">13:00~15:00</td><td rowspan="2">Premiere<br>기초 교육</td></tr>
+      <tr><td class="time-col">15:00~16:30</td><td>오디오 편집</td></tr>
+      <tr><td class="time-col">16:30~17:00</td><td>프로젝트 및<br>시퀀스 관리</td><td>타이틀 및 텍스트 /<br>내보내기 및 공유</td></tr>
     </tbody>`,
     contents: [
       "프리미어 기본 개요 및 인터페이스",
@@ -236,9 +242,8 @@ const curriculumData = {
       "영상 편집 기본, 효과 및 전환",
       "오디오 편집, 타이틀, 내보내기",
       "ACP Premiere 시험 응시",
-      "맞춤형 버티컬 AI 에이전트 설계",
     ],
-    footer: "ACP Premiere Pro 응시 지원 + 생성형 AI 실무 역량 강화",
+    footer: "ACP Premiere Pro 응시 지원",
   },
   prompt1: {
     brand: "prompt",
@@ -331,16 +336,17 @@ const curriculumData = {
     brand: "autodesk",
     brandName: "Autodesk",
     title: "ACU AutoCAD",
-    duration: "3일 과정",
+    duration: "4일 과정",
     hours: "총 20시간",
     certification: "자격증 연계",
     subtitle: "2D 도면 작성 · 좌표 활용 · 전개도/지적도 제작",
     scheduleHTML: `
-    <thead><tr><th>시간</th><th>1일차</th><th>2일차</th><th>3일차</th></tr></thead>
+    <thead><tr><th>시간</th><th>월</th><th>화</th><th>수</th><th>목</th></tr></thead>
     <tbody>
-      <tr><td class="time-col">09:00~12:00</td><td>AutoCAD 이론 & 실습<br>(도면 작성, 좌표 활용,<br>전개도/지적도)</td><td>최종 문제풀이</td><td rowspan="2">맞춤형 버티컬<br>AI 에이전트 설계</td></tr>
-      <tr><td class="time-col">12:00~13:00</td><td>점심시간</td><td>점심시간</td></tr>
-      <tr><td class="time-col">13:00~18:00</td><td>문제풀이</td><td class="highlight">AutoCAD 시험 응시</td><td></td></tr>
+      <tr><td class="time-col">10:00~12:00</td><td>오리엔테이션</td><td rowspan="2">피나무라<br>디자이너로<br>전개도 제작</td><td rowspan="4" class="highlight">문제 풀이</td><td class="highlight">AutoCAD<br>시험 응시</td></tr>
+      <tr><td class="time-col">13:00~15:00</td><td rowspan="2">AutoCAD<br>기초 교육 및<br>도형 그리기</td></tr>
+      <tr><td class="time-col">15:00~16:30</td><td rowspan="2">지적도 작성<br>및 도면 배치 후<br>출력, 내보내기</td></tr>
+      <tr><td class="time-col">16:30~17:00</td><td>생성된 객체를<br>이용한 활용법</td></tr>
     </tbody>`,
     contents: [
       "AutoCAD 인터페이스, 패널 사용법",
@@ -348,24 +354,24 @@ const curriculumData = {
       "원, 타원, 사각형, 다각형",
       "전개도 만들기 및 지적도 작성",
       "ACU AutoCAD 시험 응시",
-      "맞춤형 버티컬 AI 에이전트 설계",
     ],
-    footer: "ACU AutoCAD 응시 지원 + 생성형 AI 실무 역량 강화",
+    footer: "ACU AutoCAD 응시 지원",
   },
   meta: {
     brand: "meta",
     brandName: "Meta",
     title: "Meta Digital Marketing Associate",
-    duration: "3일 과정",
+    duration: "4일 과정",
     hours: "총 20시간",
     certification: "자격증 연계",
     subtitle: "인스타그램 마케팅 · 콘텐츠 제작 · 메타 광고 설정",
     scheduleHTML: `
-    <thead><tr><th>시간</th><th>1일차</th><th>2일차</th><th>3일차</th></tr></thead>
+    <thead><tr><th>시간</th><th>월</th><th>화</th><th>수</th><th>목</th></tr></thead>
     <tbody>
-      <tr><td class="time-col">09:00~12:00</td><td>Meta 마케팅 이론 & 실습<br>(인스타그램 마케팅,<br>콘텐츠 제작, 광고 설정)</td><td>최종 문제풀이</td><td rowspan="2">맞춤형 버티컬<br>AI 에이전트 설계</td></tr>
-      <tr><td class="time-col">12:00~13:00</td><td>점심시간</td><td>점심시간</td></tr>
-      <tr><td class="time-col">13:00~18:00</td><td>문제풀이</td><td class="highlight">MCDMA 시험 응시</td><td></td></tr>
+      <tr><td class="time-col">10:00~12:00</td><td>오리엔테이션</td><td>인스타그램<br>콘텐츠 제작</td><td rowspan="4" class="highlight">문제 풀이</td><td class="highlight">MCDMA<br>시험 응시</td></tr>
+      <tr><td class="time-col">13:00~15:00</td><td rowspan="2">인스타그램<br>마케팅 개요</td><td rowspan="2">메타 광고 개념<br>및 설정</td></tr>
+      <tr><td class="time-col">15:00~16:30</td></tr>
+      <tr><td class="time-col">16:30~17:00</td><td>인스타그램<br>마케팅 심화</td><td>메타 광고 개념<br>및 설정</td></tr>
     </tbody>`,
     contents: [
       "인스타그램 마케팅 개요",
@@ -373,24 +379,24 @@ const curriculumData = {
       "메타 광고 개념 및 설정",
       "인스타그램 마케팅 심화",
       "MCDMA 시험 응시",
-      "맞춤형 버티컬 AI 에이전트 설계",
     ],
-    footer: "MCDMA 응시 지원 + 생성형 AI 실무 역량 강화",
+    footer: "MCDMA 응시 지원",
   },
   unity: {
     brand: "unity",
     brandName: "Unity",
     title: "Unity Certified User",
-    duration: "3일 과정",
+    duration: "4일 과정",
     hours: "총 20시간",
     certification: "자격증 연계",
     subtitle: "Unity 환경 · 2D/3D 콘텐츠 제작 · C# 스크립트 기초",
     scheduleHTML: `
-    <thead><tr><th>시간</th><th>1일차</th><th>2일차</th><th>3일차</th></tr></thead>
+    <thead><tr><th>시간</th><th>월</th><th>화</th><th>수</th><th>목</th></tr></thead>
     <tbody>
-      <tr><td class="time-col">09:00~12:00</td><td>Unity 이론 & 실습<br>(환경, 2D/3D 제작,<br>C# 스크립트)</td><td>최종 문제풀이</td><td rowspan="2">맞춤형 버티컬<br>AI 에이전트 설계</td></tr>
-      <tr><td class="time-col">12:00~13:00</td><td>점심시간</td><td>점심시간</td></tr>
-      <tr><td class="time-col">13:00~18:00</td><td>문제풀이</td><td class="highlight">UCU 시험 응시</td><td></td></tr>
+      <tr><td class="time-col">10:00~12:00</td><td>오리엔테이션</td><td rowspan="2">시험대비<br>C# 스크립트<br>기초</td><td rowspan="4" class="highlight">문제 풀이</td><td class="highlight">UCU<br>시험 응시</td></tr>
+      <tr><td class="time-col">13:00~15:00</td><td rowspan="2">GameObject와<br>Component<br>구조 이해</td></tr>
+      <tr><td class="time-col">15:00~16:30</td><td rowspan="2">간단한 게임,<br>시뮬레이션<br>제작 실습</td></tr>
+      <tr><td class="time-col">16:30~17:00</td><td>2D/3D 콘텐츠<br>제작 기초</td></tr>
     </tbody>`,
     contents: [
       "Unity 기본 환경 및 에디터 이해",
@@ -398,29 +404,42 @@ const curriculumData = {
       "2D/3D 콘텐츠 제작 기초",
       "C# 스크립트 기초",
       "UCU 시험 응시",
-      "맞춤형 버티컬 AI 에이전트 설계",
     ],
-    footer: "UCU 응시 지원 + 생성형 AI 실무 역량 강화",
+    footer: "UCU 응시 지원",
   },
   gail: {
     brand: "google",
     brandName: "Google Cloud",
     title: "Generative AI Leader",
     subtitle: "생성형 AI 비즈니스 혁신 · Google Cloud AI 제품 · 비즈니스 전략",
-    duration: "3일 과정",
+    duration: "4일 과정",
     hours: "총 20시간",
     certification: "자격증 연계",
     scheduleHTML: `
-      <thead><tr><th>시간</th><th>1일차 (8h) - 실습 중심</th><th>2일차 (8h) - 이론 + 문풀</th><th>3일차 (4h) - 시험 응시</th></tr></thead>
-      <tbody>
-        <tr><td class="time-col">09:00~10:30</td><td>생성형 AI 개요 및<br>비즈니스 혁신 사례</td><td>Google Cloud AI<br>제품 개요</td><td>시험 안내 및 준비</td></tr>
-        <tr><td class="time-col">10:30~12:00</td><td>Gemini Advanced 실습</td><td>생성형 AI 핵심 이론</td><td class="highlight">시험 응시</td></tr>
-        <tr><td class="time-col">12:00~13:00</td><td>점심시간</td><td>점심시간</td><td></td></tr>
-        <tr><td class="time-col">13:00~14:30</td><td>NotebookLM · Google AI<br>Studio 실습</td><td>프롬프트 엔지니어링 기법 및<br>출력 개선 전략</td><td></td></tr>
-        <tr><td class="time-col">14:30~16:00</td><td>생성형 AI 에이전트 실습<br>(조직 혁신 관점)</td><td>케이스 기반 문제풀이<br>(비즈니스 전략 적용)</td><td></td></tr>
-        <tr><td class="time-col">16:00~17:30</td><td>실습 결과 공유 및 피드백</td><td>시험 대비 문제풀이 및 Q&A</td><td></td></tr>
-        <tr><td class="time-col">17:30~18:00</td><td>데일리 리뷰 및 정리</td><td>데일리 리뷰 및 정리</td><td></td></tr>
-      </tbody>`,
+    <thead><tr><th>시간</th><th>월</th><th>화</th><th>수</th><th>목</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="time-col">10:00~12:00</td>
+        <td>오리엔테이션</td>
+        <td>프롬프트<br>엔지니어링</td>
+        <td rowspan="4" class="highlight">문제 풀이</td>
+        <td class="highlight">Google 생성형<br>시험 응시</td>
+      </tr>
+      <tr>
+        <td class="time-col">13:00~15:00</td>
+        <td>생성형 AI 개론</td>
+        <td>출력 개선 전략</td>
+      </tr>
+      <tr>
+        <td class="time-col">15:00~16:30</td>
+        <td>생성형 AI<br>비즈니스 사례</td>
+                <td rowspan="2">생성형 AI 기반<br>콘텐츠 생성</td>
+      </tr>
+      <tr>
+        <td class="time-col">16:30~17:00</td>
+        <td>Google Cloud<br>AI 개요</td>
+      </tr>
+    </tbody>`,
     contents: [
       "생성형 AI 개요 및 비즈니스 혁신 사례",
       "Google Cloud AI 제품 (Gemini, NotebookLM, AI Studio)",
@@ -451,9 +470,8 @@ function openCurriculumModal(courseId) {
   document.getElementById("curriculumList").innerHTML = data.contents
     .map((item) => `<li>${item}</li>`)
     .join("");
-  document.getElementById(
-    "modalFooter"
-  ).innerHTML = `<strong>혜택　</strong> ${data.footer}`;
+  document.getElementById("modalFooter").innerHTML =
+    `<strong>혜택　</strong> ${data.footer}`;
 
   document.getElementById("curriculumModal").classList.add("active");
   document.body.style.overflow = "hidden";
