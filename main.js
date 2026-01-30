@@ -2,43 +2,376 @@ const programs = [
   {
     src: "images/img1.png",
     title: "AI-900 국제 인증 자격증 과정 (전남대)",
+    curriculumId: "250211",
   },
   {
     src: "images/img2.png",
     title: "생성형 AI 프롬프트 전문교육과정 (전남대)",
+    curriculumId: "250829",
   },
   {
     src: "images/img3.png",
     title: "AI로 확장되는 동물자원학 - TOEIC 900 보다 MCF AI-900 (전남대)",
+    detail: {
+      brand: "ms",
+      brandName: "Microsoft",
+      subtitle: "동물자원학 전공 연계 + AI-900 국제 인증 대비",
+      meta: { duration: "4일", hours: "총 24시간" },
+
+      summary: [
+        "전공 특화 프롬프트 실습",
+        "AI-900 이론/문제풀이/모의테스트",
+        "AI-900 시험 응시",
+      ],
+
+      scheduleHTML: `
+      <thead><tr><th>시간</th><th>1일차</th><th>2일차</th><th>3일차</th><th>4일차</th></tr></thead>
+      <tbody>
+        <tr><td class="time-col">12:00~18:00</td><td>프롬프트<br>기초/구조화<br>+<br>동물산업<br>특화 실습</td><td>AI/ML/NLP/CV</td><td>AI-900<br>이론/문제풀이</td><td>모의테스트<br>+<br>시험 응시</td></tr>
+      </tbody>
+    `,
+    },
   },
   {
     src: "images/img4.jpg",
     title: "IT 시스템관리 - GPT로 기획·설계해서 칼퇴하세요 (산기협)",
+    curriculumId: "251119",
+    detail: {
+      brand: "prompt",
+      brandName: "실무 프로젝트",
+      subtitle: "AI 행정 비서 3종(MVP) 구축 + 12개월 칼퇴 로드맵",
+      meta: { duration: "1일", hours: "총 8시간" },
+
+      summary: [
+        "실무 Pain Point 진단 → ROI 예측",
+        "결과보고서/행정문서/예산변경 제안서 챗봇 3종 구축",
+        "프롬프트 튜닝(Few-shot) + 보안/비식별화 + 운영/프로세스 재설계",
+        "MVP 완성 + 12개월 칼퇴 실행 로드맵",
+      ],
+
+      scheduleHTML: `
+      <thead>
+        <tr><th>구분</th><th>교육제목</th><th>내용</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="time-col">1차시</td>
+          <td>산단 실무자 Pain Point 진단<br>& AI 자동화 전략 수립</td>
+          <td>행정업무 시간 낭비 요인 분석 및<br>개인별 AI 자동화 ROI 예측 시트 작성</td>
+        </tr>
+        <tr>
+          <td class="time-col">2차시</td>
+          <td>[비서 1호]<br>결과보고서 자동 생성 챗봇 설계</td>
+          <td>증빙 자료 통합 및 정량 성과<br>자동 산출 결과보고서 자동화 챗봇 구축(AI 활용)</td>
+        </tr>
+        <tr>
+          <td class="time-col">3차시</td>
+          <td>[비서 2호]<br>행정문서 템플릿 자동화 챗봇 설계</td>
+          <td>반려 Zero 체크리스트/규정 준수 검증<br>행정문서 자동화 챗봇 구축(AI 활용)</td>
+        </tr>
+        <tr>
+          <td class="time-col">4차시</td>
+          <td>[비서 3호]<br>예산변경 제안서 작성 챗봇 설계</td>
+          <td>상사 설득형 논리 구조 + 정량 ROI 자동 계산<br>예산변경 제안서 챗봇 구축(AI 활용)</td>
+        </tr>
+        <tr>
+          <td class="time-col">5차시</td>
+          <td>AI 프롬프트 고도화<br>& 맞춤형 튜닝 전략</td>
+          <td>내 업무 특화 프롬프트 최적화 및<br>Few-shot 학습 적용 전략 실습</td>
+        </tr>
+        <tr>
+          <td class="time-col">6차시</td>
+          <td>보안 리스크 제로 설계<br>& 개인정보 보호 전략</td>
+          <td>개인정보 비식별화 처리 및<br>프라이빗 챗봇 설계 방법론 실습</td>
+        </tr>
+        <tr>
+          <td class="time-col">7차시</td>
+          <td>3종 비서 챗봇 통합 운영<br>& 업무 프로세스 재설계</td>
+          <td>결과보고서-행정문서-제안서 연계<br>워크플로우 구축 및 협업 도구 연동</td>
+        </tr>
+        <tr>
+          <td class="time-col">8차시</td>
+          <td>나만의 AI 행정 비서 3종 MVP 완성<br>& 칼퇴 실행 로드맵 수립</td>
+          <td>개인 맞춤형 3종 챗봇 MVP 완성<br>& 12개월 칼퇴 실행 로드맵 작성</td>
+        </tr>
+      </tbody>
+    `,
+    },
   },
   {
     src: "images/img5.jpg",
     title: "TOEIC 900 보다 MCF AI-900 (동강대)",
+    curriculumId: "251120",
+    detail: {
+      brand: "ms",
+      brandName: "Microsoft",
+      subtitle: "프롬프트 실무 + AI-900 국제 인증 대비 + 비대면 시험 응시",
+      meta: { duration: "3일", hours: "총 20시간" },
+
+      summary: [
+        "프롬프트 기본 개념 이해 → 구조화 설계 → 제작 실습",
+        "AI-900 이론/문제풀이/모의테스트",
+        "AI-900 비대면 시험 응시",
+      ],
+
+      scheduleHTML: `
+      <thead>
+        <tr>
+          <th>시간</th>
+          <th>1일차</th>
+          <th>2일차</th>
+          <th>3일차</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="time-col">09:00~10:00</td>
+          <td rowspan="2">OT 및 프롬프트<br/>기본 개념 이해</td>
+          <td rowspan="4">AI 핵심<br/>이론 정리</td>
+          <td rowspan="2" class="highlight">AI-900<br/>시험</td>
+        </tr>
+        <tr>
+          <td class="time-col">10:00~11:00</td>
+        </tr>
+
+        <tr>
+          <td class="time-col">12:00~13:00</td>
+          <td rowspan="2">프롬프트<br/>구조화 설계</td>
+          <td rowspan="4"></td>
+        </tr>
+        <tr>
+          <td class="time-col">13:00~14:00</td>
+        </tr>
+
+        <tr>
+          <td class="time-col">14:00~16:00</td>
+          <td>프롬프트 제작 실습 1<br/>(업무 시나리오별<br/>템플릿 직접 작성)</td>
+          <td rowspan="2" class="highlight">AI-900<br/>문제풀이</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td class="time-col">16:00~18:00</td>
+          <td>프롬프트 제작 실습 2<br/>(내 업무 맞춤형<br/>프롬프트 완성)</td>
+          <td>-</td>
+        </tr>
+      </tbody>
+    `,
+    },
   },
   {
     src: "images/img6.png",
     title: "시험만 보고 끝? NO - 실무에서 바로 쓰는 실전형 AI-900 (호남대)",
+    curriculumId: "251128",
+    detail: {
+      brand: "ms",
+      brandName: "Microsoft",
+      subtitle: "AI-900 시험 + 산업·기업 현장 실무 활용까지 한 번에",
+      meta: { duration: "3일", hours: "총 14시간" },
+
+      summary: [
+        "AI-900 핵심 이론 정리",
+        "기출·실전 문제 풀이 중심 자격 대비",
+        "산업·기업 현장에서 바로 쓰는 AI 실무 활용",
+        "Microsoft MCF AI-900 시험 응시",
+      ],
+
+      scheduleHTML: `
+  <thead>
+    <tr>
+      <th>시간</th>
+      <th>교육 내용</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="time-col">1일차 (8시간)</td>
+      <td>
+        - 인공지능 기본 개념 이해<br/>
+        - AI-900 핵심 이론 학습<br/>
+        - 최신 기출·실전 문제 풀이 및 시험 대비
+      </td>
+    </tr>
+    <tr>
+      <td class="time-col">2일차 (2시간)</td>
+      <td class="highlight">
+        Microsoft MCF AI-900 시험 응시
+      </td>
+    </tr>
+    <tr>
+      <td class="time-col">3일차 (4시간)</td>
+      <td>
+        - 산업·기업 현장에서 활용되는 AI 기술<br/>
+        - 사례 중심 실습 및 실무 역량 강화
+      </td>
+    </tr>
+  </tbody>
+`,
+    },
   },
   {
     src: "images/img7.png",
-    title:
-      "광주에서 먼저 바꾸는 일상! 오늘 배워 오늘 적용하는 생활 AI (전남대 RISE)",
+    title: "광주에서 먼저 바꾸는 일상! 오늘 배워 오늘 적용하는 생활 AI",
+    curriculumId: "251204",
+    detail: {
+      brand: "prompt",
+      brandName: "생활 AI",
+      subtitle: "오늘 배워 오늘 적용하는 생활·업무·콘텐츠 실습형 AI",
+      meta: { duration: "1일", hours: "총 8시간" },
+
+      summary: [
+        "생활혁신 AI 트렌드부터 실전 적용까지 한 번에",
+        "프롬프트 전략 기반으로 마케팅·고객관리·문서작성 자동화 실습",
+        "업무 자동화 챗봇 개발 + 나만의 ‘AI 일상 비서’ 적용 플랜 수립",
+      ],
+
+      scheduleHTML: `
+      <thead>
+        <tr>
+          <th>시간</th>
+          <th>주요 교육 내용</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="time-col">09:00 ~ 10:00</td>
+          <td>생활혁신 AI 트렌드</td>
+        </tr>
+        <tr>
+          <td class="time-col">10:00 ~ 11:00</td>
+          <td>프롬프트 전략</td>
+        </tr>
+        <tr>
+          <td class="time-col">11:00 ~ 12:00</td>
+          <td>제품·메뉴 기획 자동화</td>
+        </tr>
+        <!-- 점심시간(12:00~13:00) 제외 -->
+        <tr>
+          <td class="time-col">13:00 ~ 14:00</td>
+          <td>SNS 마케팅 자동화</td>
+        </tr>
+        <tr>
+          <td class="time-col">14:00 ~ 15:00</td>
+          <td>고객관리 자동화</td>
+        </tr>
+        <tr>
+          <td class="time-col">15:00 ~ 16:00</td>
+          <td>블로그·상세페이지 작성</td>
+        </tr>
+        <tr>
+          <td class="time-col">16:00 ~ 17:00</td>
+          <td>업무 자동화 챗봇 개발</td>
+        </tr>
+        <tr>
+          <td class="time-col">17:00 ~ 18:00</td>
+          <td><strong>나만의 ‘AI 일상 비서’ 적용 플랜</strong></td>
+        </tr>
+      </tbody>
+    `,
+    },
   },
   {
     src: "images/img8.png",
-    title: "AI와 함께하는 행정혁신 - AI 비서 실전 구축 과정 (전남대 재직자)",
+    title: "AI와 함께하는 행정혁신 - AI 비서 실전 구축 과정",
+    curriculumId: "251211",
+    detail: {
+      brand: "prompt",
+      brandName: "재직자 실무",
+      subtitle:
+        "프롬프트 엔지니어링 심화 + 업무 자동화 구조 설계 + 직무별 실습 (총 8H)",
+      meta: { duration: "1일", hours: "총 8시간" },
+
+      summary: [
+        "실무 Pain Point 진단 → AI 자동화 전략 수립",
+        "결과보고서·행정문서·예산변경 제안서 자동화 챗봇 구축",
+        "업무 특화 프롬프트 튜닝 및 보안 설계",
+        "워크플로우 구축을 통한 AI 비서 3종 MVP 완성",
+      ],
+
+      scheduleHTML: `
+  <thead>
+    <tr>
+      <th>시간</th>
+      <th>주요 교육 내용</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="time-col">09:00 ~ 10:00</td>
+      <td>실무 Pain Point 진단 & AI 자동화 전략 수립</td>
+    </tr>
+    <tr>
+      <td class="time-col">10:00 ~ 11:00</td>
+      <td>결과보고서 자동화 챗봇 구축</td>
+    </tr>
+    <tr>
+      <td class="time-col">11:00 ~ 12:00</td>
+      <td>행정문서 템플릿 자동화 챗봇 구축</td>
+    </tr>
+    <tr>
+      <td class="time-col">13:00 ~ 14:00</td>
+      <td>예산변경 제안서 작성 챗봇 구축</td>
+    </tr>
+    <tr>
+      <td class="time-col">14:00 ~ 15:00</td>
+      <td>업무 특화 프롬프트 최적화 및 실습</td>
+    </tr>
+    <tr>
+      <td class="time-col">15:00 ~ 16:00</td>
+      <td>보안 & 개인정보 보호 설계 실습</td>
+    </tr>
+    <tr>
+      <td class="time-col">16:00 ~ 17:00</td>
+      <td>워크플로우 구축 및 협업 도구 연동</td>
+    </tr>
+    <tr>
+      <td class="time-col">17:00 ~ 18:00</td>
+      <td>AI 비서 3종 MVP 완성 & 칼퇴 로드맵 수립</td>
+    </tr>
+  </tbody>
+`,
+    },
   },
   {
     src: "images/img9.png",
     title: "ChatGPT를 활용한 업무시간 단축과 AX 기반 업무혁신 (재직자)",
+    curriculumId: "260115",
+    detail: {
+      brand: "prompt",
+      brandName: "재직자 실무",
+      subtitle: "업무시간 단축 + AX 기반 업무혁신 실습",
+      meta: { duration: "1일", hours: "총 8시간" },
+
+      summary: [
+        "ChatGPT 업무 활용 핵심 패턴 학습",
+        "문서·기획·커뮤니케이션 자동화 실습",
+        "AX 관점 업무 프로세스 재설계",
+        "개인별 적용 시나리오 및 실행 플랜 도출",
+      ],
+
+      scheduleHTML: `
+      <thead>
+        <tr>
+          <th>구분</th>
+          <th>주요 교육 내용</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="time-col">1차시</td><td>AX 개요 & 업무혁신 포인트 도출</td></tr>
+        <tr><td class="time-col">2차시</td><td>프롬프트 구조화 설계</td></tr>
+        <tr><td class="time-col">3차시</td><td>문서/보고 자동화 실습</td></tr>
+        <tr><td class="time-col">4차시</td><td>기획/분석 자동화 실습</td></tr>
+        <tr><td class="time-col">5차시</td><td>회의/메일/커뮤니케이션 자동화</td></tr>
+        <tr><td class="time-col">6차시</td><td>업무 프로세스 재설계 워크숍</td></tr>
+        <tr><td class="time-col">7차시</td><td>개인별 자동화 시나리오 설계</td></tr>
+        <tr><td class="time-col">8차시</td><td>적용 플랜 수립 & Q&A</td></tr>
+      </tbody>
+    `,
+    },
   },
   {
     src: "images/img10.png",
     title: "생성형 AI 리더 교육 강사 과정",
+    curriculumId: "260203",
   },
 ];
 
@@ -55,7 +388,7 @@ const curriculumData = {
     scheduleHTML: `
     <thead><tr><th>시간</th><th>1일차</th><th>2일차</th><th>3일차</th><th>4일차</th></tr></thead>
     <tbody>
-      <tr><td class="time-col">10:00~12:00</td><td>오리엔테이션<td>컴퓨터 비전</td><td rowspan="4" class="highlight">문제 풀이</td><td class="highlight">AI-900<br>시험 응시</td></tr>
+      <tr><td class="time-col">10:00~12:00</td><td>오리엔테이션</td><td>컴퓨터 비전</td><td rowspan="4" class="highlight">문제 풀이</td><td class="highlight">AI-900<br>시험 응시</td></tr>
       <tr><td class="time-col">13:00~15:00</td><td rowspan="2">인공지능 이해하기</td><td>자연어 처리</td></tr>
       <tr><td class="time-col">15:00~16:30</td><td rowspan="2">대화형 AI</td></tr>
       <tr><td class="time-col">16:30~17:00</td><td>머신러닝</td></tr>
@@ -130,11 +463,25 @@ const curriculumData = {
     scheduleHTML: `
     <thead><tr><th>시간</th><th>월</th><th>화</th><th>수</th><th>목</th></tr></thead>
     <tbody>
-      <tr><td class="time-col">10:00~12:00</td><td>오리엔테이션</td><td>MS 보안 솔루션의<br>기능</td><td rowspan="4" class="highlight">문제 풀이</td><td class="highlight">SC-900<br>시험 응시</td></tr>
-      <tr><td class="time-col">13:00~15:00</td><td rowspan="2">보안 및 규정 준수<br>및 ID의 개념 설명</td><td>MS 보안 솔루션의<br>기능</td></tr>
-      <tr><td class="time-col">15:00~16:30</td><td rowspan="2">Microsoft<br>
-규정 준수<br>솔루션의 기능</tr>
-      <tr><td class="time-col">16:30~17:00</td><td>Microsoft Entra의<br>기능</td></tr>
+      <tr>
+        <td class="time-col">10:00~12:00</td>
+        <td>오리엔테이션</td>
+        <td rowspan="2">MS 보안 솔루션의<br>기능</td>
+        <td rowspan="4" class="highlight">문제 풀이</td>
+        <td class="highlight">SC-900<br>시험 응시</td>
+      </tr>
+      <tr>
+        <td class="time-col">13:00~15:00</td>
+        <td rowspan="2">보안 및 규정 준수<br>및 ID의 개념 설명</td>
+      </tr>
+      <tr>
+        <td class="time-col">15:00~16:30</td>
+        <td rowspan="2">Microsoft<br>규정 준수<br>솔루션의 기능</td>
+      </tr>
+      <tr>
+        <td class="time-col">16:30~17:00</td>
+        <td>Microsoft Entra의<br>기능</td>
+      </tr>
     </tbody>`,
     contents: [
       "보안 및 규정 준수 개념",
@@ -475,6 +822,11 @@ function openCurriculumModal(courseId) {
 
   document.getElementById("curriculumModal").classList.add("active");
   document.body.style.overflow = "hidden";
+  document.getElementById("curriculumNotice").style.display = "";
+  document.getElementById("modalAudience").style.display = "";
+  document.getElementById("modalAudience").textContent = "👥 30명";
+
+  document.querySelector(".curriculum-footer").style.display = "";
 }
 
 // 커리큘럼 모달 닫기
@@ -563,4 +915,52 @@ function copyEmail(e) {
   e.preventDefault();
   navigator.clipboard.writeText("agaaga23@naver.com");
   alert("이메일 주소가 복사되었습니다!");
+}
+
+function openReferenceModal(index) {
+  const item = programs[index];
+  if (!item || !item.detail) return;
+
+  document.getElementById("modalBrandTag").textContent = item.detail.brandName;
+  document.getElementById("modalBrandTag").className =
+    "brand-tag " + (item.detail.brand || "");
+
+  document.getElementById("modalTitle").textContent = item.title;
+  document.getElementById("modalSubtitle").textContent =
+    item.detail.subtitle || "";
+
+  document.getElementById("modalDuration").textContent =
+    "📅 " + (item.detail.meta?.duration || "");
+  document.getElementById("modalHours").textContent =
+    "⏱️ " + (item.detail.meta?.hours || "");
+  document.getElementById("modalCertification").textContent = "";
+
+  // (기존 안내/인원 숨김 로직 유지)
+  const noticeEl = document.getElementById("curriculumNotice");
+  if (noticeEl) noticeEl.style.display = "none";
+  const audienceEl = document.getElementById("modalAudience");
+  if (audienceEl) audienceEl.style.display = "none";
+
+  // ✅ 1) 교육 내용(표) = scheduleTable
+  document.getElementById("scheduleTable").innerHTML =
+    item.detail.scheduleHTML || ""; // 없으면 빈칸
+
+  // ✅ 2) 교육 일정(텍스트) = summary만 curriculumList에
+  const summary = item.detail.summary || [];
+  document.getElementById("curriculumList").innerHTML = summary
+    .map((x) => `<li>${x}</li>`)
+    .join("");
+
+  // footer 처리 (기존 유지)
+  const footerEl = document.getElementById("modalFooter");
+  const footerText = (item.detail.footer || "").trim();
+  if (!footerText) {
+    footerEl.parentElement.style.display = "none";
+  } else {
+    footerEl.parentElement.style.display = "";
+    footerEl.innerHTML = `<strong>안내　</strong> ${footerText}`;
+  }
+
+  document.getElementById("curriculumModal").classList.add("active");
+  document.body.style.overflow = "hidden";
 }
