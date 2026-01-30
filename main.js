@@ -11,7 +11,7 @@ const programs = [
   },
   {
     src: "images/img3.png",
-    title: "AI로 확장되는 동물자원학 - TOEIC 900 보다 MCF AI-900 (전남대)",
+    title: "AI로 확장되는 동물자원학 - TOEIC 900 보다 MCF AI-900",
     detail: {
       brand: "ms",
       brandName: "Microsoft",
@@ -34,7 +34,7 @@ const programs = [
   },
   {
     src: "images/img4.jpg",
-    title: "IT 시스템관리 - GPT로 기획·설계해서 칼퇴하세요 (산기협)",
+    title: "IT 시스템관리 - GPT로 기획·설계해서 칼퇴하세요",
     curriculumId: "251119",
     detail: {
       brand: "prompt",
@@ -100,7 +100,7 @@ const programs = [
   },
   {
     src: "images/img5.jpg",
-    title: "TOEIC 900 보다 MCF AI-900 (동강대)",
+    title: "TOEIC 900 보다 MCF AI-900",
     curriculumId: "251120",
     detail: {
       brand: "ms",
@@ -160,7 +160,7 @@ const programs = [
   },
   {
     src: "images/img6.png",
-    title: "시험만 보고 끝? NO - 실무에서 바로 쓰는 실전형 AI-900 (호남대)",
+    title: "시험만 보고 끝? NO - 실무에서 바로 쓰는 실전형 AI-900",
     curriculumId: "251128",
     detail: {
       brand: "ms",
@@ -333,7 +333,7 @@ const programs = [
   },
   {
     src: "images/img9.png",
-    title: "ChatGPT를 활용한 업무시간 단축과 AX 기반 업무혁신 (재직자)",
+    title: "ChatGPT를 활용한 업무시간 단축과 AX 기반 업무혁신",
     curriculumId: "260115",
     detail: {
       brand: "prompt",
