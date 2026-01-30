@@ -25,7 +25,7 @@ const programs = [
       ],
 
       scheduleHTML: `
-      <thead><tr><th>시간</th><th>1일차</th><th>2일차</th><th>3일차</th><th>4일차</th></tr></thead>
+      <thead><tr><th>시간</th><th>1일차</th><th>2일차</th><th>3일차</th><th>4일차</th></thead>
       <tbody>
         <tr><td class="time-col">12:00~18:00</td><td>프롬프트<br>기초/구조화<br>+<br>동물산업<br>특화 실습</td><td>AI/ML/NLP/CV</td><td>AI-900<br>이론/문제풀이</td><td>모의테스트<br>+<br>시험 응시</td></tr>
       </tbody>
@@ -147,12 +147,10 @@ const programs = [
           <td class="time-col">14:00~16:00</td>
           <td>프롬프트 제작 실습 1<br/>(업무 시나리오별<br/>템플릿 직접 작성)</td>
           <td rowspan="2" class="highlight">AI-900<br/>문제풀이</td>
-          <td>-</td>
         </tr>
         <tr>
           <td class="time-col">16:00~18:00</td>
-          <td>프롬프트 제작 실습 2<br/>(내 업무 맞춤형<br/>프롬프트 완성)</td>
-          <td>-</td>
+          <td>프롬프트 제작 실습 2<br/>(내 업무 맞춤형<br/>프롬프트 완성)</td>>
         </tr>
       </tbody>
     `,
