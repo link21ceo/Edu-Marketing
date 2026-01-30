@@ -1,13 +1,177 @@
 const programs = [
+  // 중간에 임의로 추가함 img 11, 12 (실제 진행과정 아니고 임의로 만든 과정 / 그 외 최신순 정렬)
+  {
+    src: "images/img12.png",
+    title: "24시간 작동하는 AI Agent 시스템 구축",
+    curriculumId: "250117", // 2025.01.17 기준
+
+    detail: {
+      brand: "prompt",
+      brandName: "AI Agent 실무",
+      subtitle: "AI를 ‘도구’가 아니라 ‘일하는 시스템’으로 만드는 1일 집중 실습",
+      meta: { duration: "1일", hours: "총 6시간 (점심 1시간)" },
+
+      summary: [
+        "업무를 ‘Agent 작업 단위’로 분해하는 방법",
+        "목표 기반 워크플로우(Trigger → Plan → Act → Report) 설계",
+        "프롬프트·툴·데이터를 연결한 실행 시나리오 구성",
+        "반복 업무를 자동 실행하는 Agent 운영 체크리스트",
+        "내 업무 1개를 Agent 구조로 설계하고 결과물까지 완성",
+      ],
+
+      scheduleHTML: `
+      <thead>
+        <tr><th>시간</th><th>교육 내용</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="time-col">10:00~11:00</td><td>AI Agent 개념 / 업무 자동화 패턴(Trigger·조건·예외처리)</td></tr>
+        <tr><td class="time-col">11:00~12:00</td><td>업무 분해 실습: 목표 정의 → 입력/출력 → 단계/역할 설계(작업 단위화)</td></tr>
+        <tr><td class="time-col">12:00~13:00</td><td class="highlight">점심시간</td></tr>
+        <tr><td class="time-col">13:00~14:00</td><td>워크플로우 설계: Plan(계획) → Act(실행) → Review(검증) 구조 만들기</td></tr>
+        <tr><td class="time-col">14:00~15:00</td><td>Agent 프롬프트 템플릿: 역할/규칙/도구/출력 포맷 고정(재사용 설계)</td></tr>
+        <tr><td class="time-col">15:00~16:00</td><td>통합 실습: 내 업무 1개를 Agent 시스템으로 설계 + 운영 체크리스트 작성</td></tr>
+      </tbody>
+    `,
+    },
+  },
+  // 중간에 임의로 추가함 img 11, 12 (실제 진행과정 아니고 임의로 만든 과정 / 그 외 최신순 정렬)
+  {
+    src: "images/img11.png",
+    title: "대화로 시스템을 만들다 Vibe Coding",
+    curriculumId: "250131", // 2025.01.31 기준
+
+    detail: {
+      brand: "prompt",
+      brandName: "Vibe Coding 실전",
+      subtitle:
+        "비전공자도 ‘대화’로 요구사항 → 설계 → 결과물까지 만드는 1일 과정",
+      meta: { duration: "1일", hours: "총 6시간 (점심 1시간)" },
+
+      summary: [
+        "Vibe Coding 사고방식: ‘코딩’보다 ‘시스템 대화 설계’",
+        "요구사항을 기능/화면/데이터로 쪼개는 프롬프트 구조",
+        "에러가 나도 ‘디버깅 대화’로 수정하는 방법",
+        "산출물(명세서/플로우/초안 코드/테스트 시나리오) 패키지화",
+        "미니 프로젝트 1개 완성(랜딩/폼/자동화 중 택1 형태로 적용 가능)",
+      ],
+
+      scheduleHTML: `
+      <thead>
+        <tr><th>시간</th><th>교육 내용</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="time-col">10:00~11:00</td><td>Vibe Coding 개요: 대화로 요구사항 정의/우선순위/성공 기준 만들기</td></tr>
+        <tr><td class="time-col">11:00~12:00</td><td>명세 작성 실습: 기능 목록·유저 스토리·입출력·예외 케이스 정리</td></tr>
+        <tr><td class="time-col">12:00~13:00</td><td class="highlight">점심시간</td></tr>
+        <tr><td class="time-col">13:00~14:00</td><td>설계 실습: 화면/흐름(Flow) + 데이터 구조(필드/규칙) 만들기</td></tr>
+        <tr><td class="time-col">14:00~15:00</td><td>생성 실습: 결과물 초안 생성(코드/문서/자동화 시나리오) + 품질 기준 적용</td></tr>
+        <tr><td class="time-col">15:00~16:00</td><td>디버깅 실습: 오류 재현 → 원인 추정 → 수정 지시 프롬프트(반복 개선 루프)</td></tr>
+      </tbody>
+    `,
+    },
+  },
   {
     src: "images/img1.png",
-    title: "AI-900 국제 인증 자격증 과정 (전남대)",
+    title: "AI-900 국제 인증 자격증 과정",
     curriculumId: "250211",
+    detail: {
+      brand: "ms",
+      brandName: "Microsoft",
+      subtitle: "Microsoft Azure AI Fundamentals 국제 인증 대비 과정",
+      meta: {
+        duration: "3일",
+        hours: "총 20시간",
+      },
+
+      summary: [
+        "AI 개념 및 Microsoft Azure AI 핵심 서비스 이해",
+        "AI-900 시험 출제 범위 기반 이론 정리",
+        "최신 기출 및 예상 문제 풀이 집중 학습",
+        "모의 테스트를 통한 시험 실전 대비",
+        "Microsoft AI-900 국제 인증 시험 응시",
+      ],
+
+      scheduleHTML: `
+      <thead>
+        <tr>
+          <th>일자</th>
+          <th>교육 내용</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="time-col">1일차</td>
+          <td>AI 개념 이해 및 Azure AI 서비스 개요 이론 수업</td>
+        </tr>
+        <tr>
+          <td class="time-col">2일차</td>
+          <td>AI-900 최신 기출 문제 풀이 및 핵심 정리</td>
+        </tr>
+        <tr>
+          <td class="time-col highlight">3일차</td>
+          <td class="highlight">모의 테스트 및 AI-900 국제 인증 시험 응시</td>
+        </tr>
+      </tbody>
+    `,
+    },
   },
   {
     src: "images/img2.png",
-    title: "생성형 AI 프롬프트 전문교육과정 (전남대)",
+    title: "생성형 AI 프롬프트 전문교육과정",
     curriculumId: "250829",
+
+    detail: {
+      brand: "prompt",
+      brandName: "업무 생산성 AI",
+      subtitle: "업무에 바로 적용 가능한 생성형 AI 프롬프트 실전 과정",
+      meta: {
+        duration: "1일",
+        hours: "총 6시간 (점심 1시간)",
+      },
+
+      summary: [
+        "업무 생산성을 높이는 생성형 AI 활용 전략 이해",
+        "업무 유형별 프롬프트 설계 방법 학습",
+        "보고서·문서·기획 업무 자동화 실습",
+        "맞춤형 챗봇 설계를 통한 반복 업무 효율화",
+        "실무에 즉시 적용 가능한 프롬프트 세트 완성",
+      ],
+
+      scheduleHTML: `
+      <thead>
+        <tr>
+          <th>시간</th>
+          <th>교육 내용</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="time-col">10:00~11:00</td>
+          <td>생성형 AI 트렌드와 업무 생산성 혁신 사례</td>
+        </tr>
+        <tr>
+          <td class="time-col">11:00~12:00</td>
+          <td>업무 생산성을 높이는 프롬프트 기본 구조 이해</td>
+        </tr>
+        <tr>
+          <td class="time-col highlight">12:00~13:00</td>
+          <td class="highlight">점심시간</td>
+        </tr>
+        <tr>
+          <td class="time-col">13:00~14:00</td>
+          <td>문서·보고·기획 업무 자동화 프롬프트 실습</td>
+        </tr>
+        <tr>
+          <td class="time-col">14:00~15:00</td>
+          <td>업무 맞춤형 챗봇 설계 및 활용 실습</td>
+        </tr>
+        <tr>
+          <td class="time-col">15:00~16:00</td>
+          <td>나만의 업무 생산성 프롬프트 패키지 완성</td>
+        </tr>
+      </tbody>
+    `,
+    },
   },
   {
     src: "images/img3.png",
@@ -370,11 +534,59 @@ const programs = [
     src: "images/img10.png",
     title: "생성형 AI 리더 교육 강사 과정",
     curriculumId: "260203",
+    detail: {
+      brand: "google",
+      brandName: "Google Cloud",
+      subtitle: "AX(AI Transformation) 리더를 위한 생성형 AI 리더 & 강사 과정",
+      meta: {
+        duration: "2일",
+        hours: "총 14시간",
+      },
+
+      summary: [
+        "AX(AI Transformation) 리더를 위한 생성형 AI 전략 이해",
+        "Gemini, NotebookLM 등 Google 최신 생성형 AI 도구 실습",
+        "AI Agent 설계 및 비즈니스 적용 구조 학습",
+        "책임감 있는 AI 도입(RAI)과 조직 적용 전략",
+        "Google Generative AI Leader 시험 대비 핵심 로드맵 제공",
+        "교육·강의·컨설팅에 바로 활용 가능한 실전 커리큘럼 패키지 제공",
+      ],
+
+      scheduleHTML: `
+      <thead>
+        <tr>
+          <th>일자</th>
+          <th>교육 내용</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="time-col">1일차</td>
+          <td>
+            - AX 개요와 생성형 AI 패러다임 이해<br/>
+            - Google Cloud 기반 생성형 AI 생태계(Gemini, NotebookLM)<br/>
+            - 생성형 AI 활용 사례 분석 (조직·산업·교육)<br/>
+            - AI Agent 개념 이해 및 기본 구조 설계
+          </td>
+        </tr>
+        <tr>
+          <td class="time-col">2일차</td>
+          <td>
+            - AI Agent 심화: 업무·조직·교육 시나리오 설계<br/>
+            - 책임감 있는 AI(RAI)와 데이터·보안·윤리 설계<br/>
+            - 생성형 AI 리더십과 조직 도입 전략<br/>
+            - Google Generative AI Leader 자격 대비 핵심 정리
+          </td>
+        </tr>
+      </tbody>
+    `,
+    },
   },
 ];
 
 // 커리큘럼 데이터
 const curriculumData = {
+  // 대학생 대상
   ai900: {
     brand: "ms",
     brandName: "Microsoft",
@@ -651,32 +863,6 @@ const curriculumData = {
     ],
     footer: "경영, 공학, 디자인, 인문 등 전공별 맞춤 챗봇 제공",
   },
-  // prompt3: {
-  //   brand: "prompt",
-  //   brandName: "글로벌 라이선스 + prompt",
-  //   title: "글로벌 라이선스 + 프롬프트 융합 트랙",
-  //   duration: "3일 과정",
-  //   hours: "총 24시간",
-  //   certification: "자격증 연계, 실무 역량 강화",
-  //   subtitle: "프롬프트 실무 + 글로벌 라이선스 자격증 동시 취득 · 4일 과정",
-  //   scheduleHTML: `
-  //     <thead><tr><th>일차</th><th>교육 내용</th></tr></thead>
-  //     <tbody>
-  //       <tr><td class="time-col">1일차</td><td>생성형 AI 기본 개념 이해 / 프롬프트 구조화 설계 / 업무 시나리오 기반 프롬프트 제작 실습</td></tr>
-  //       <tr><td class="time-col">2일차</td><td>산업·기업 현장 AI 기술 / 생성형 AI 기반 업무 자동화 전략 / 고급 프롬프트 설계 및 실무 적용</td></tr>
-  //       <tr><td class="time-col">3일차</td><td>국제 라이선스 핵심 이론 정리 / 시험 유형 분석 및 기출 문제 풀이</td></tr>
-  //       <tr><td class="time-col highlight">4일차</td><td class="highlight">글로벌 라이선스 시험 응시</td></tr>
-  //     </tbody>`,
-  //   contents: [
-  //     "생성형 AI 기본 개념 및 프롬프트 구조화",
-  //     "업무 시나리오 기반 프롬프트 제작 실습",
-  //     "산업·기업 현장 AI 기술 활용",
-  //     "생성형 AI 기반 업무 자동화 전략",
-  //     "글로벌 라이선스 핵심 이론",
-  //     "글로벌 라이선스 응시",
-  //   ],
-  //   footer: "프롬프트 실무 역량 + 글로벌 라이선스 동시 취득",
-  // },
   autocad: {
     brand: "autodesk",
     brandName: "Autodesk",
@@ -794,6 +980,125 @@ const curriculumData = {
       "Generative AI Leader 시험 응시",
     ],
     footer: "Google Generative AI Leader 국제 인증 자격 시험 응시 지원",
+  },
+
+  // 기업 대상
+  dxleadership: {
+    brand: "strategy",
+    brandName: "AX / DX Leadership",
+    title: "AI 기반 조직전략 & DX 리더십 마스터 클래스",
+    duration: "1일 과정",
+    hours: "총 8시간",
+    certification: "전략 워크숍",
+    subtitle: "AI·자동화·에이전트 시대의 전략적 의사결정과 조직 생산성 혁신",
+    scheduleHTML: `
+    <thead>
+      <tr><th>시간</th><th>교육 내용</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="time-col">09:00~10:00</td>
+        <td>AX/DX 오리엔테이션<br>AI·Agent 트렌드와 경영 환경 변화</td>
+      </tr>
+      <tr>
+        <td class="time-col">10:00~11:00</td>
+        <td>DX 프레임워크 이해<br>디지털 전환 단계 진단 · 성공/실패 사례 분석</td>
+      </tr>
+      <tr>
+        <td class="time-col">11:00~12:00</td>
+        <td>문제 정의 실습<br>조직 핵심 과제 도출 · KPI/OKR 연결</td>
+      </tr>
+      <tr>
+        <td class="time-col highlight">12:00~13:00</td>
+        <td class="highlight">점심시간</td>
+      </tr>
+      <tr>
+        <td class="time-col">13:00~14:00</td>
+        <td>업무 가치사슬 재설계<br>자동화·AI 적용 포인트 도출</td>
+      </tr>
+      <tr>
+        <td class="time-col">14:00~15:00</td>
+        <td>투자 의사결정 전략<br>ROI 시뮬레이션 · Make or Buy 판단</td>
+      </tr>
+      <tr>
+        <td class="time-col">15:00~16:30</td>
+        <td>PoC 설계 실습<br>최소 기능 정의 · 성공 기준 · 운영 시나리오</td>
+      </tr>
+      <tr>
+        <td class="time-col">16:30~18:00</td>
+        <td>실행 로드맵 완성<br>30·60·90일 실행 계획 · 조직 적용 전략</td>
+      </tr>
+    </tbody>
+  `,
+    contents: [
+      "AX/DX 리더를 위한 AI·에이전트 트렌드 이해",
+      "조직 DX 성숙도 진단 및 거버넌스 설계",
+      "핵심 문제 정의 → KPI/OKR 연결 방법",
+      "업무 가치사슬 기반 AI·자동화 적용 포인트 발굴",
+      "ROI 시뮬레이션과 투자 의사결정 프레임",
+      "PoC(Proof of Concept) 설계 및 성공 기준 정의",
+      "AI 리스크 관리 및 조직 변화관리 전략",
+      "30·60·90일 실행 로드맵 수립",
+    ],
+  },
+
+  teamAutomation: {
+    brand: "strategy",
+    brandName: "Team Automation",
+    title: "AI 시대의 팀장 필수 업무자동화 전략",
+    duration: "1일 과정",
+    hours: "총 8시간",
+    certification: "실무 적용 워크숍",
+    subtitle:
+      "반복 업무 자동화를 통해 팀 KPI를 끌어올리고, 바로 실행 가능한 자동화 로드맵을 완성",
+    scheduleHTML: `
+    <thead>
+      <tr><th>시간</th><th>교육 내용</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="time-col">09:00~10:00</td>
+        <td>팀장 관점 AI 자동화 전략<br>업무 생산성 지표(KPI)와 자동화의 연결</td>
+      </tr>
+      <tr>
+        <td class="time-col">10:00~11:00</td>
+        <td>업무 분해 프레임워크<br>반복업무 식별(빈도·시간·리스크) → 자동화 후보 선정</td>
+      </tr>
+      <tr>
+        <td class="time-col">11:00~12:00</td>
+        <td>자동화 우선순위 매트릭스 실습</td>
+      </tr>
+      <tr>
+        <td class="time-col highlight">12:00~13:00</td>
+        <td class="highlight">점심시간</td>
+      </tr>
+      <tr>
+        <td class="time-col">13:00~14:00</td>
+        <td>팀 업무 표준화(템플릿화) 설계<br>보고/회의/요청/승인 프로세스의 입력·출력 포맷 고정</td>
+      </tr>
+      <tr>
+        <td class="time-col">14:00~15:00</td>
+        <td>자동화 워크플로우 설계<br>Trigger → 처리(LLM/툴) → 검증 → 공유/저장</td>
+      </tr>
+      <tr>
+        <td class="time-col">15:00~16:30</td>
+        <td>실무 자동화 시나리오 설계 실습<br>예: 주간보고 자동화 / 회의록·액션아이템 / 고객·이슈 응대 초안 / 일정·리마인드</td>
+      </tr>
+      <tr>
+        <td class="time-col">16:30~18:00</td>
+        <td>실행 로드맵 완성(30·60·90일)<br>운영 규칙(검수·권한·보안) + 성과 측정 대시보드 설계</td>
+      </tr>
+    </tbody>
+  `,
+    contents: [
+      "팀 KPI와 반복업무 자동화를 연결하는 전략 프레임",
+      "반복업무 식별: 빈도·시간·리스크·표준화 가능성 기준",
+      "팀 업무 템플릿화(입력/출력 포맷)로 자동화 성공률 높이기",
+      "Trigger → 처리 → 검증 → 공유/저장 자동화 워크플로우 설계",
+      "팀장 필수 자동화 유스케이스(보고·회의·고객응대·일정·이슈관리)",
+      "운영체계: 검수 룰, 권한관리, 보안/개인정보 체크리스트",
+      "30·60·90일 실무 적용 로드맵 및 성과 측정 설계",
+    ],
   },
 };
 

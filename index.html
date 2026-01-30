@@ -196,20 +196,26 @@
                 </div>
               </div>
               <div class="course-list">
-                <div class="course-item">
-                  <span class="course-badge">전략</span>
+                <div
+                  class="course-item strategy clickable"
+                  onclick="openCurriculumModal('dxleadership')"
+                >
+                  <span class="course-badge strategy">전략</span>
                   <h4>AI 기반 조직전략 & DX 리더십 마스터 클래스</h4>
                   <p>
                     AI·자동화·에이전트 시대의 전략적 의사결정,<br />조직 생산성
                     혁신
                   </p>
                 </div>
-                <div class="course-item">
-                  <span class="course-badge">전략</span>
+                <div
+                  class="course-item strategy clickable"
+                  onclick="openCurriculumModal('teamAutomation')"
+                >
+                  <span class="course-badge strategy">전략</span>
                   <h4>AI 시대의 팀장 필수 업무자동화 전략</h4>
                   <p>
-                    반복 업무 자동화를 통한 팀 KPI 향상,<br />실무 적용 로드맵
-                    수립
+                    반복 업무 자동화를 통한 팀 KPI 향상,<br />
+                    실무 적용 로드맵 수립
                   </p>
                 </div>
                 <div class="course-item">
@@ -752,7 +758,7 @@
       </section>
       <div class="cards-grid">
         <article class="card">
-          <div class="card-image-wrapper" onclick="openModal(9)">
+          <div class="card-image-wrapper" onclick="openModal(11)">
             <img
               src="images/img10.png"
               alt="생성형 AI 리더 교육 강사 과정"
@@ -774,12 +780,17 @@
           </div>
           <div class="card-content">
             <span class="card-badge google">Google</span>
-            <h3 class="card-title">생성형 AI 리더 교육 강사 과정</h3>
+            <h3
+              class="card-title clickable-title"
+              onclick="openReferenceModal(11)"
+            >
+              [AX 리더]<br />생성형 AI 리더 교육 강사 과정
+            </h3>
           </div>
         </article>
         <!-- 8번) -->
         <article class="card">
-          <div class="card-image-wrapper" onclick="openModal(8)">
+          <div class="card-image-wrapper" onclick="openModal(10)">
             <img
               src="images/img9.png"
               alt="ChatGPT 업무시간 단축"
@@ -803,15 +814,15 @@
             <span class="card-badge green">Prompt</span>
             <h3
               class="card-title clickable-title"
-              onclick="openReferenceModal(8)"
+              onclick="openReferenceModal(10)"
             >
-              업무시간 단축 & AX 기반 업무혁신
+              [재직자]<br />업무시간 단축 & AX 기반 업무혁신
             </h3>
           </div>
         </article>
         <!-- 7번 -->
         <article class="card">
-          <div class="card-image-wrapper" onclick="openModal(7)">
+          <div class="card-image-wrapper" onclick="openModal(9)">
             <img
               src="images/img8.png"
               alt="AI와 함께하는 행정혁신"
@@ -834,16 +845,16 @@
             <span class="card-badge green">Prompt</span>
             <h3
               class="card-title clickable-title"
-              onclick="openReferenceModal(7)"
+              onclick="openReferenceModal(9)"
             >
-              AI 비서 실전 구축 과정
+              [전남대 재직자]<br />AI 비서 실전 구축 과정
             </h3>
           </div>
         </article>
 
         <!-- 6번 -->
         <article class="card">
-          <div class="card-image-wrapper" onclick="openModal(6)">
+          <div class="card-image-wrapper" onclick="openModal(8)">
             <img
               src="images/img7.png"
               alt="광주 시민 대상 생활 AI"
@@ -866,16 +877,16 @@
             <span class="card-badge green">Prompt</span>
             <h3
               class="card-title clickable-title"
-              onclick="openReferenceModal(6)"
+              onclick="openReferenceModal(8)"
             >
-              AI 기반 일상 업무 자동화 및 디지털 생활
+              [일반인]<br />AI 기반 일상 업무 자동화 및 디지털 생활
             </h3>
           </div>
         </article>
 
         <!-- 5번 -->
         <article class="card">
-          <div class="card-image-wrapper" onclick="openModal(5)">
+          <div class="card-image-wrapper" onclick="openModal(7)">
             <img
               src="images/img6.png"
               alt="호남대 실전형 AI-900"
@@ -899,16 +910,16 @@
             <span class="card-badge green">Prompt</span>
             <h3
               class="card-title clickable-title"
-              onclick="openReferenceModal(5)"
+              onclick="openReferenceModal(7)"
             >
-              실무에서 바로 쓰는 실전형 AI-900
+              [대학생]<br />실무에서 바로 쓰는 실전형 AI-900
             </h3>
           </div>
         </article>
 
         <!-- 4번 -->
         <article class="card">
-          <div class="card-image-wrapper" onclick="openModal(4)">
+          <div class="card-image-wrapper" onclick="openModal(6)">
             <img
               src="images/img5.jpg"
               alt="동강대 MCF AI-900"
@@ -932,16 +943,16 @@
             <span class="card-badge green">Prompt</span>
             <h3
               class="card-title clickable-title"
-              onclick="openReferenceModal(4)"
+              onclick="openReferenceModal(6)"
             >
-              TOEIC 900 보다 MCF AI-900
+              [대학생]<br />TOEIC 900 보다 MCF AI-900
             </h3>
           </div>
         </article>
 
         <!-- 3번 -->
         <article class="card">
-          <div class="card-image-wrapper" onclick="openModal(3)">
+          <div class="card-image-wrapper" onclick="openModal(5)">
             <img
               src="images/img4.jpg"
               alt="IT 시스템관리 칼퇴 프로젝트"
@@ -964,16 +975,16 @@
             <span class="card-badge green">Prompt</span>
             <h3
               class="card-title clickable-title"
-              onclick="openReferenceModal(3)"
+              onclick="openReferenceModal(5)"
             >
-              실무자를 위한 칼퇴 프로젝트
+              [재직자]<br />실무자를 위한 칼퇴 프로젝트
             </h3>
           </div>
         </article>
 
         <!-- 2번 -->
         <article class="card">
-          <div class="card-image-wrapper" onclick="openModal(2)">
+          <div class="card-image-wrapper" onclick="openModal(4)">
             <img
               src="images/img3.png"
               alt="AI로 확장되는 동물자원학"
@@ -997,16 +1008,16 @@
             <span class="card-badge green">Prompt</span>
             <h3
               class="card-title clickable-title"
-              onclick="openReferenceModal(2)"
+              onclick="openReferenceModal(4)"
             >
-              AI로 확장되는 동물자원학
+              [대학생]<br />AI로 확장되는 동물자원학
             </h3>
           </div>
         </article>
 
         <!-- 1번 -->
         <article class="card">
-          <div class="card-image-wrapper" onclick="openModal(1)">
+          <div class="card-image-wrapper" onclick="openModal(3)">
             <img
               src="images/img2.png"
               alt="생성형 AI 프롬프트 전문교육과정"
@@ -1027,13 +1038,18 @@
           </div>
           <div class="card-content">
             <span class="card-badge green">Prompt</span>
-            <h3 class="card-title">업무 생산성 UP 프롬프트 과정</h3>
+            <h3
+              class="card-title clickable-title"
+              onclick="openReferenceModal(3)"
+            >
+              [재직자]<br />업무 생산성 UP 프롬프트 과정
+            </h3>
           </div>
         </article>
 
         <!-- 0번 -->
         <article class="card">
-          <div class="card-image-wrapper" onclick="openModal(0)">
+          <div class="card-image-wrapper" onclick="openModal(2)">
             <img
               src="images/img1.png"
               alt="생성형 AI 프롬프트 전문교육과정"
@@ -1054,7 +1070,79 @@
           </div>
           <div class="card-content">
             <span class="card-badge blue">MS AI-900</span>
-            <h3 class="card-title">AI-900 국제 인증 자격증 과정</h3>
+            <h3
+              class="card-title clickable-title"
+              onclick="openReferenceModal(2)"
+            >
+              [대학생]<br />AI-900 국제 인증 자격증 과정
+            </h3>
+          </div>
+        </article>
+
+        <!-- 임의로 제작해서 추가함 아래2개 (img11, 12) -->
+        <article class="card">
+          <div class="card-image-wrapper" onclick="openReferenceModal(1)">
+            <img
+              src="images/img11.png"
+              alt="대화로 시스템을 만들다 Vibe Coding"
+              class="card-image"
+            />
+            <div class="card-overlay">
+              <div class="click-hint">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                </svg>
+                클릭하여 크게 보기
+              </div>
+            </div>
+          </div>
+
+          <div class="card-content">
+            <span class="card-badge rose">Coding</span>
+            <h3
+              class="card-title clickable-title"
+              onclick="openReferenceModal(1)"
+            >
+              [기업대표 및 실무자]<br />대화로 시스템을 만들다 Vibe Coding
+            </h3>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-image-wrapper" onclick="openReferenceModal(0)">
+            <img
+              src="images/img12.png"
+              alt="24시간 작동하는 AI Agent 시스템 구축"
+              class="card-image"
+            />
+            <div class="card-overlay">
+              <div class="click-hint">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                </svg>
+                클릭하여 크게 보기
+              </div>
+            </div>
+          </div>
+
+          <div class="card-content">
+            <span class="card-badge yellow">AI-Agent</span>
+            <h3
+              class="card-title clickable-title"
+              onclick="openReferenceModal(0)"
+            >
+              [기업대표 및 실무자]<br />24시간 작동하는 AI Agent 시스템 구축
+            </h3>
           </div>
         </article>
       </div>
